@@ -98,6 +98,14 @@ button:focus {
     border: none;
 }
 
+.btn.btn-outline {
+    color: var(--color-primary);
+    background: transparent;
+    border-radius: 8px;
+    border: 1px solid var(--color-primary);
+    font-weight: 500;
+}
+
 h1,
 h2,
 h3,
@@ -245,8 +253,13 @@ span.line {
     color: var(--color-primary);
 }
 
+#sidebar ul li object {
+    filter: brightness(0) saturate(100%) invert(62%) sepia(0%) saturate(0%) hue-rotate(354deg) brightness(97%) contrast(91%);
+}
+
 #sidebar ul li.active object {
-    fill: var(--color-primary);
+    /* fill: var(--color-primary); */
+    filter: brightness(0) saturate(100%) invert(12%) sepia(96%) saturate(5761%) hue-rotate(268deg) brightness(88%) contrast(119%);
 }
 
 #sidebar object {
@@ -425,6 +438,35 @@ a[data-toggle="collapse"] {
     padding: 2rem .5rem 0;
 }
 
+.right-sidebar.wider {
+    min-width: 500px;
+    max-width: 500px;
+}
+
+.right-sidebar .custom-menu.right-bar {
+    display: none;
+}
+
+.right-sidebar.hide {
+    right: 0;
+}
+.right-sidebar .custom-menu.right-bar {
+    transform: translateX(-100px);
+}
+
+@media (max-width: 1280px) {
+    .right-sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: -270px;
+    }
+
+    .right-sidebar .custom-menu.right-bar {
+        display: block;
+    }
+}
+
 .nav-item.dropdown .dropdown-menu {
     display: none;
     /* Initially hide the dropdown menu */
@@ -480,7 +522,8 @@ a[data-toggle="collapse"] {
     color: #000;
 }
 
-.right-sidebar .top, .top {
+.right-sidebar .top,
+.top {
     padding: .5rem 1rem;
 }
 
@@ -601,6 +644,7 @@ a[data-toggle="collapse"] {
     padding: 1rem;
     border-radius: 8px;
     color: #fff;
+    margin: .5rem 0;
 }
 
 .stat-card h3 {
@@ -642,6 +686,7 @@ a[data-toggle="collapse"] {
     padding: 1.5rem .6rem 1.5rem 1rem;
     transition: .3s;
     box-shadow: 0 .2rem .6rem rgba(0, 0, 0, 0.1);
+    margin: .5rem 0;
 }
 
 .service-card h3 {
@@ -671,6 +716,7 @@ a[data-toggle="collapse"] {
     padding: 1rem;
     background: #fff;
     border-radius: 8px;
+    margin: .5rem 0;
 }
 
 .bottom-card h1.title {
@@ -856,8 +902,9 @@ form.airtime {
     background: #F3F6FA;
     padding: .5rem;
     border-radius: 4px;
-    margin: .5rem 0;  
+    margin: .5rem 0;
 }
+
 .overlay .plan-card {
     width: 75%;
 }
@@ -938,6 +985,7 @@ form.airtime {
     display: flex;
     align-items: end;
 }
+
 .data-overlay .header-bg.second {
     background: url('../images/overlay-bg2.png') no-repeat !important;
     height: 20vh;
@@ -947,6 +995,7 @@ form.airtime {
     align-items: end;
     justify-content: end;
 }
+
 .data-overlay .header-bg.third {
     background: url('../images/overlay-bg3.png') no-repeat !important;
     height: 20vh;
@@ -956,6 +1005,7 @@ form.airtime {
     align-items: end;
     justify-content: end;
 }
+
 .data-overlay .header-bg.fourth {
     background: url('../images/overlay-bg4.png') no-repeat !important;
     height: 20vh;
@@ -965,6 +1015,7 @@ form.airtime {
     align-items: end;
     justify-content: end;
 }
+
 .data-overlay-form span.opaque-text {
     position: absolute;
     right: 5px;
@@ -989,6 +1040,7 @@ form.airtime {
     font-size: 1.4rem;
     font-weight: 600;
 }
+
 /* .overlay h2.subtitle {
     font-size: 1rem;
 } */
@@ -1024,6 +1076,7 @@ form.airtime {
 .receipt-overlay {
     width: 470px;
 }
+
 .recur-overlay {
     z-index: 20;
 }
@@ -1054,6 +1107,7 @@ form.airtime {
     justify-content: center;
     z-index: 14;
 }
+
 .payment.full.inner-overlay {
     height: 90%;
 }
@@ -1067,9 +1121,11 @@ form.airtime {
 .status.inner-overlay {
     z-index: 15;
 }
+
 .setup.inner-overlay {
     z-index: 17;
 }
+
 .receipt.inner-overlay {
     z-index: 16;
 }
@@ -1333,18 +1389,21 @@ form.airtime {
 .payment-card.electric-blue {
     background: #6805F3;
 }
+
 .payment-card.electric-blue h4,
 .payment-card.indigo h4 {
     color: #fff;
     font-weight: 600;
     font-size: 1rem;
 }
+
 .payment-card.electric-blue span,
 .payment-card.indigo span {
     font-size: .8rem;
     color: #ddd;
     margin: 0;
 }
+
 .payment-card.electric-blue h5,
 .payment-card.indigo h5 {
     color: #fff;
@@ -1394,14 +1453,16 @@ form.airtime {
 
 /* Number Input */
 
-.number-input {
+.number-input,
+.number2-input {
     display: flex;
     width: 100%;
     justify-content: space-between;
     margin: 3rem auto;
 }
 
-.number-input input {
+.number-input input,
+.number2-input input {
     width: 50px;
     height: 50px;
     text-align: center;
@@ -1415,6 +1476,10 @@ form.airtime {
 @media (max-width: 550px) {
     .number-input {
         width: 75%;
+    }
+
+    .number2-input {
+        width: 75%
     }
 }
 
@@ -1501,34 +1566,42 @@ table .status.success {
     width: 100%;
     justify-content: space-between;
 }
+
 .setup-overlay ul {
     padding: 0;
 }
+
 .setup-overlay .radio-input .check {
     padding: .4rem;
     border: 3px solid #888;
     border-radius: 50%;
     transition: .3s;
 }
+
 .setup-overlay input[type="radio"] {
     visibility: hidden;
 }
+
 .setup-overlay .radio-input label {
     width: 85%;
     cursor: pointer;
 }
+
 .setup-overlay .radio-input:hover .check {
     border: 3px solid #444;
 }
+
 .setup-overlay .radio-input .check .inside {
     padding: .3rem;
     background: var(--color-primary);
     border-radius: 50%;
     opacity: 0;
 }
-.setup-overlay .radio-input input[type="radio"]:checked ~ .check {
+
+.setup-overlay .radio-input input[type="radio"]:checked~.check {
     border: 3px solid var(--color-primary);
 }
+
 .setup-overlay .radio-input input[type="radio"]:checked~.check .inside {
     opacity: 1;
 }
@@ -1548,6 +1621,7 @@ table .status.success {
     /* width: 100px; */
     display: inline-block;
 }
+
 .recur-overlay .opaque-text {
     background: #6805f318;
     color: var(--color-primary);
@@ -1565,9 +1639,11 @@ table .status.success {
     appearance: none;
     margin: 0;
 }
+
 .recur-overlay .plus {
     transform: translateX(-45px);
 }
+
 /* Optional: Style the input field as needed */
 .recur-overlay .data-input {
     width: 100%;
@@ -1594,6 +1670,7 @@ table .status.success {
 .recur-overlay .btn-number:hover {
     background-color: #f5f5f5;
 }
+
 .input-group.quantity .icon {
     position: absolute;
     top: 5px;
@@ -1601,12 +1678,15 @@ table .status.success {
     color: #000;
     padding: .3rem .7rem;
 }
+
 .input-group.quantity .icon.plus {
     right: 5px;
 }
+
 .input-group.quantity .icon.minus {
     left: 5px
 }
+
 .input-group.quantity input {
     text-align: center;
 }
@@ -1615,6 +1695,7 @@ table .status.success {
 .course-section {
     padding-top: 2rem;
 }
+
 .course-section h1.title {
     font-size: 1.4rem;
     font-weight: 700;
@@ -1628,9 +1709,11 @@ table .status.success {
     font-weight: 700;
     color: #000;
 }
+
 .course-section .nav.nav-tabs {
     border-bottom: 0;
 }
+
 .course-section .nav-tabs .nav-link {
     font-weight: 500;
     background: transparent;
@@ -1638,11 +1721,13 @@ table .status.success {
     font-size: 1rem;
     outline: none !important;
 }
+
 .course-section .nav-link:hover,
 .course-section .nav-link:focus {
     border: 0 !important;
     outline: none !important;
 }
+
 .course-section .featured .title {
     text-transform: uppercase;
     color: #888;
@@ -1655,51 +1740,66 @@ table .status.success {
     padding: 2rem 1rem .9rem;
     background: #fff;
     border-radius: 18px;
+    margin: .5rem 0;
 }
+
 .course-card .course-title {
     margin: 1rem 0;
     font-size: 1.4rem;
 }
+
 .course-card .btn {
     padding: .6rem;
     transition: .3s;
 }
+
 .course-card .details {
     color: #888;
 }
-.course-card > img {
+
+.course-card>img {
     height: 55px;
 }
+
 .course-card .opaque-btn {
     background: #5304BF1A;
     color: var(--color-primary);
     font-weight: 600;
 }
+
 .course-card .btn-primary:hover {
     background: var(--color-primary-darker) !important;
 }
+
 .course .card {
     padding: 1rem;
     border-radius: 18px;
     border: 0;
+    margin: .5rem 0;
 }
+
 .course .card img {
     border-radius: 18px;
 }
+
 .course .card h2.title {
     color: #000;
     text-transform: capitalize;
     font-size: 1.1rem;
     margin: 1rem 0;
 }
+
 .course .card .video {
     margin: 1rem 0;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #ddd;;
+    border-bottom: 1px solid #ddd;
+    ;
 }
+
 .course .card .video:last-of-type {
     border: 0;
 }
+
 .course .card h1.title {
     color: #000;
     font-size: 1.1rem;
@@ -1711,10 +1811,12 @@ table .status.success {
 .course-completed {
     margin-top: 2rem;
 }
+
 .course-progress .card,
 .course-completed .card {
     padding: 1rem 1.5rem;
 }
+
 .course-progress .card h2,
 .course-completed .card h2 {
     margin: 0;
@@ -1723,20 +1825,24 @@ table .status.success {
 .sidebar-progress {
     margin-top: 2rem;
 }
+
 .sidebar-progress h1.title {
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }
+
 .sidebar-progress .card {
     background: #F3F6FA;
     border: 0;
     padding: 1rem;
 }
+
 .sidebar-progress h5 {
     margin: 0;
     font-weight: 600;
 }
+
 .sidebar-progress img {
     background: #fff;
     border-radius: 50%;
@@ -1749,7 +1855,152 @@ table .status.success {
     font-weight: 700;
     margin-bottom: .5rem;
 }
+
 .settings h4.subtitle {
     font-size: 1.1rem;
     color: #888;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.upload-btn-wrapper button {
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.settings .btn-text {
+    background: 0;
+    border: 0;
+    color: red;
+    font-weight: 600;
+}
+
+.settings .avatar .icon {
+    font-size: 2rem;
+    padding: .2rem 1.35rem;
+    background: #5304BF1A;
+    color: var(--color-primary);
+    border-radius: 50%;
+    font-weight: 600;
+}
+
+.icon-tab {
+    padding-right: 25px;
+    filter: brightness(0) saturate(100%) invert(12%) sepia(1%) saturate(5472%) hue-rotate(174deg) brightness(103%) contrast(88%);
+}
+
+.settings .nav .nav-link {
+    width: 100%;
+    background: transparent;
+    color: #969696;
+    border: 1px solid #5304BF1A;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    transition: .3s;
+}
+
+.settings .nav .nav-link.active {
+    background: #fff;
+    color: var(--color-primary);
+}
+
+.settings .nav .nav-link.active .icon-tab {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(94%) saturate(5663%) hue-rotate(267deg) brightness(88%) contrast(120%);
+}
+
+.settings .tab-content .card {
+    padding: 2rem;
+    background: #ffffff94;
+    border-radius: 18px;
+    border: 1px solid var(--color-primary);
+    width: 75%;
+}
+
+.settings .tab-content h1.title {
+    font-size: 1.4rem;
+}
+
+.settings .tab-content form {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.settings .tab-content label {
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
+.settings .tab-content input.form-control {
+    padding: 1.5rem 1rem;
+}
+
+.settings .tab-content h5 {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.settings .number-input,
+.settings .number2-input {
+    margin: 1rem 0;
+}
+
+.settings #new-pin,
+.settings #pin-success,
+.settings #reset-pin,
+.settings #change-phone,
+.settings #phone-success {
+    display: none;
+}
+
+.contact-img {
+    width: 35%;
+}
+
+.contact-card {
+    padding: 1rem;
+    border: 1px solid #969696;
+    border-radius: 8px;
+    margin: .5rem auto;
+    width: 65%;
+}
+
+.contact-card p {
+    margin: 0;
+}
+
+.telcard {
+    padding: 1rem;
+    border: 1px solid #969696;
+    border-radius: 8px;
+    width: 50%;
+    margin-top: 100px;
+}
+
+.telcard .title {
+    color: #969696;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.telcard h1 {
+    font-size: 3rem;
+    color: #000;
+    font-weight: 700;
+    margin: 0;
+    margin-right: 5px
 }

@@ -248,7 +248,13 @@
             </div>
         </div>
 
-        <div class="right-sidebar d-none d-md-block">
+        <div class="right-sidebar" id="right-sidebar-content">
+            <div class="custom-menu right-bar" id="right-bar">
+                <button type="button" id="toggleRightSidebar" class="btn btn-primary">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Right Sidebar</span>
+                </button>
+            </div>
             <div class="top">
                 <div class="d-flex align-items-center justify-content-around">
                     <img src="images/notification.png" alt="notification">
@@ -573,6 +579,14 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
+    <script>
+        const rightToggle = document.getElementById('right-bar');
+        const rightBar = document.getElementById('right-sidebar-content')
+
+        rightToggle.addEventListener('click', function () {
+            rightBar.classList.toggle('hide')
+        })
+    </script>
     <script>
         // Get the elements
         const renewalOverlayBtn = document.getElementById('showRenewalOverlay');

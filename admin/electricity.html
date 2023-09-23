@@ -122,12 +122,12 @@
                 <h1 class="title">Electricity Bills</h1>
 
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-6 col-md-3">
                         <div class="network-card" id="data-overlay-btn">
                             <img src="images/bedc.png" alt="bedc">
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-6 col-md-3">
                         <div class="network-card">
                             <img src="images/ekedc.png" alt="ekedc">
                         </div>
@@ -236,7 +236,13 @@
             </div>
         </div>
 
-        <div class="right-sidebar d-none d-md-block">
+        <div class="right-sidebar" id="right-sidebar-content">
+            <div class="custom-menu right-bar" id="right-bar">
+                <button type="button" id="toggleRightSidebar" class="btn btn-primary">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Right Sidebar</span>
+                </button>
+            </div>
             <div class="top">
                 <div class="d-flex align-items-center justify-content-around">
                     <img src="images/notification.png" alt="notification">
@@ -1056,6 +1062,14 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        const rightToggle = document.getElementById('right-bar');
+        const rightBar = document.getElementById('right-sidebar-content')
+
+        rightToggle.addEventListener('click', function () {
+            rightBar.classList.toggle('hide')
+        })
+    </script>
     <script>
         // Get the input element and plus/minus buttons
         const inputElement = document.getElementById("quantity");

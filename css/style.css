@@ -2321,13 +2321,17 @@ PAGE THRIVEHEAD
 
 @media (max-width: 500px) {
     .section-progress .text-block {
-        width: 330px;
+        width: 100%;
         display: inline-block;
         margin: 1rem auto;
     }
 
     .section-progress .text-end h2 {
         font-size: 2rem;
+    }
+
+    .section-progress .row.progress-phase {
+        display: column-reverse !important;
     }
 }
 
