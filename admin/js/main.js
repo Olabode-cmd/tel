@@ -49,6 +49,22 @@
 		}
 	});
 
+	const eyeIcon3 = document.getElementById('eye-icon3');
+	const balanceSpan3 = document.getElementById('balance3');
+	let isHidden3 = false;
+
+	eyeIcon3.addEventListener('click', () => {
+		if (isHidden3) {
+			// Show the balance
+			balanceSpan3.innerHTML = '1,200.00';
+			isHidden3 = false;
+		} else {
+			// Hide the balance and replace with asterisks
+			balanceSpan3.innerHTML = '*****';
+			isHidden3 = true;
+		}
+	});
+
 	// Copy Function
 
 	const copyLink = document.getElementById('copy-link');
@@ -70,6 +86,7 @@
 		// Change the button text to 'Copied!'
 		copyButton.textContent = 'Copied!';
 	});
+
 
 
 })(jQuery);

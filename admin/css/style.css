@@ -32,10 +32,20 @@ body {
     position: relative;
 }
 
+.modal-header {
+    border-bottom: none;
+}
+
 .text-primary {
     color: var(--color-primary) !important;
 }
 
+select.form-control,
+input.form-control {
+    padding: 0.8rem 1rem;
+    height: auto !important;
+    font-size: 16px;
+}
 a {
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
@@ -81,6 +91,15 @@ button:focus {
     background: var(--color-primary-darker) !important;
 }
 
+.btn-text {
+    background: none;
+    color: var(--color-primary);
+    font-weight: 500;
+    padding: .7rem 1rem;
+    border: none;
+    font-size: 1rem;
+}
+
 .purple-btn {
     padding: .7rem 1rem;
     background: var(--color-primary-darker);
@@ -104,6 +123,24 @@ button:focus {
     border-radius: 8px;
     border: 1px solid var(--color-primary);
     font-weight: 500;
+    padding: .7rem 1rem;
+    font-size: .95rem;
+    transition: .3s;
+}
+
+.btn.btn-outline.white {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.welcome .btn.btn-outline:hover {
+    background: var(--color-primary-darker);
+    color: #fff;
+    border: 1px solid var(--color-primary-darker);
+}
+
+.hidden {
+    display: none;
 }
 
 h1,
@@ -178,6 +215,10 @@ span.line {
     padding: .1rem;
     display: block;
     margin: 1rem auto;
+}
+
+.fill-white {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7496%) hue-rotate(183deg) brightness(97%) contrast(99%);
 }
 
 /* Side Bar */
@@ -285,11 +326,11 @@ span.line {
     }
 
     #sidebar.active {
-        margin-left: 0;
+        margin-left: 50px;
     }
 
     #sidebar .custom-menu {
-        margin-right: -50px !important;
+        margin-right: -70px !important;
         top: 10px !important;
     }
 }
@@ -356,6 +397,11 @@ a[data-toggle="collapse"] {
 
 .nav-item.active object {
     fill: purple;
+}
+
+.nav-link {
+    font-size: .9rem;
+    font-weight: 500;
 }
 
 /* Main Content Styling */
@@ -450,6 +496,7 @@ a[data-toggle="collapse"] {
 .right-sidebar.hide {
     right: 0;
 }
+
 .right-sidebar .custom-menu.right-bar {
     transform: translateX(-100px);
 }
@@ -544,8 +591,8 @@ a[data-toggle="collapse"] {
 
 .right-sidebar .recent h2.subtitle {
     font-size: .9rem;
-    font-weight: 600;
-    color: #ccc;
+    font-weight: 400;
+    color: #999;
 }
 
 .right-sidebar .activities h2.title {
@@ -576,18 +623,18 @@ a[data-toggle="collapse"] {
     width: 100%;
 }
 
-.right-sidebar .refer-card {
+.refer-card {
     background: #F8F8F8;
     border-radius: 8px;
     padding: 1rem;
     margin-top: 1rem;
 }
 
-.right-sidebar .refer-card h1.title {
+.refer-card h1.title {
     font-size: 1rem;
 }
 
-.right-sidebar .refer-card p {
+.refer-card p {
     color: #000;
     font-size: .75rem;
 }
@@ -638,6 +685,28 @@ a[data-toggle="collapse"] {
 .welcome h1.title {
     font-size: 1.4rem;
     font-weight: 600;
+}
+
+.opaque-card {
+    background: #5304BF1A;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.opaque-card .text-primary {
+    font-weight: 600;
+    font-size: .95rem;
+    margin: 0;
+}
+
+.opaque-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.opaque-card img {
+    margin-left: 10px;
 }
 
 .stat-card {
@@ -730,7 +799,7 @@ a[data-toggle="collapse"] {
 }
 
 /* Airtime Dashboard Page */
-form.airtime {
+form.main-form {
     margin-top: 2rem;
 }
 
@@ -744,6 +813,53 @@ form.airtime {
     font-size: 2rem;
     font-weight: 600;
 }
+
+
+/* Drop Down Element */
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.selected-option {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.network-icon {
+    /* width: 20px; */
+    height: 40px;
+    margin-right: 10px;
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.dropdown-options li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-options li:hover {
+    background-color: #f0f0f0;
+}
+
 
 /* .airtime input,
 .airtime select,
@@ -870,12 +986,47 @@ form.airtime {
     padding: 1rem;
     border: 1px solid #eee;
     border-radius: 8px;
-    width: 350px;
+    background: #5304BF1A;
+    /* width: 350px; */
+}
+
+.purchase-card h6 {
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+}
+
+.purchase-card p {
+    margin: 0;
+}
+
+.purchase-card img.network {
+    background: #fff;
+    border-radius: 18px;
+}
+
+.purchase.row {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .purchase-card {
+        padding: .5rem;
+    }
+
+    .purchase-card h6 {
+        font-size: .9rem;
+    }
+
+    .purchase-card p {
+        font-size: .85rem;
+    }
 }
 
 .pay-bottom h5 {
     font-size: 1rem;
     font-weight: 700;
+    /* margin: 0; */
     margin-top: 1rem;
 }
 
@@ -1533,7 +1684,7 @@ table .time {
     color: #888;
 }
 
-table .status {
+.status {
     padding: .2rem 1rem;
     border-radius: 18px;
     font-weight: 600;
@@ -1542,17 +1693,17 @@ table .status {
     display: inline-block;
 }
 
-table .status.failed {
+.status.failed {
     background: rgba(255, 0, 0, 0.123);
     color: rgb(163, 8, 8);
 }
 
-table .status.pending {
+.status.pending {
     background: rgba(12, 12, 143, 0.137);
     color: rgb(18, 18, 122);
 }
 
-table .status.success {
+.status.success {
     background: rgba(4, 192, 4, 0.123);
     color: green;
 }
@@ -1607,22 +1758,27 @@ table .status.success {
 }
 
 /* Recur Overlay */
-.recur-overlay .input-group {
+.modal-dialog .input-group {
     width: 225px;
     align-items: center;
     /* Adjust the width as needed */
 }
 
-.recur-overlay .input-group-btn .btn-number {
+.modal-dialog .input-group.inactive {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.modal-dialog .input-group-btn .btn-number {
     padding: 6px 12px;
 }
 
-.recur-overlay .input-number {
+.modal-dialog .input-number {
     /* width: 100px; */
     display: inline-block;
 }
 
-.recur-overlay .opaque-text {
+.modal-dialog .opaque-text {
     background: #6805f318;
     color: var(--color-primary);
     text-transform: uppercase;
@@ -1633,19 +1789,19 @@ table .status.success {
     transform: translateX(-45px)
 }
 
-.recur-overlay input[type="number"]::-webkit-inner-spin-button,
-.recur-overlay input[type="number"]::-webkit-outer-spin-button {
+.modal-dialog input[type="number"]::-webkit-inner-spin-button,
+.modal-dialog input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     appearance: none;
     margin: 0;
 }
 
-.recur-overlay .plus {
+.modal-dialog .plus {
     transform: translateX(-45px);
 }
 
 /* Optional: Style the input field as needed */
-.recur-overlay .data-input {
+.modal-dialog .data-input {
     width: 100%;
     padding: 6px 12px;
     font-size: 16px;
@@ -1657,17 +1813,17 @@ table .status.success {
 }
 
 /* Optional: Style the buttons */
-.recur-overlay .btn-number {
+.modal-dialog .btn-number {
     /* background-color: #fff; */
     /* border: 1px solid #ccc; */
     border-radius: 3px;
 }
 
-.recur-overlay .btn-number i {
+.modal-dialog .btn-number i {
     font-size: 20px;
 }
 
-.recur-overlay .btn-number:hover {
+.modal-dialog .btn-number:hover {
     background-color: #f5f5f5;
 }
 
@@ -2003,4 +2159,219 @@ table .status.success {
     font-weight: 700;
     margin: 0;
     margin-right: 5px
+}
+
+/* Modal Adjustments */
+#pay .modal-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#pay .modal-body {
+    padding-top: 0;
+}
+
+#pay .sub-price {
+    text-decoration: line-through;
+    font-size: 1.2rem;
+    color: #888;
+    text-align: center;
+}
+
+#pay .network {
+    width: 95px;
+    border: 1.5px solid #ccc;
+    padding: .5rem;
+    border-radius: 14px;
+    margin-right: 10px;
+}
+
+#pay h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#pay p {
+    margin: 0;
+}
+
+#pay .sub-price.small {
+    font-size: .9rem;
+}
+
+#pay .details p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.modal-body .title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #000;
+}
+
+/* Transactions and Renewal */
+.transaction-card h1.title,
+.renewal-card h1.title {
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 500;
+}
+
+.transaction-card .card,
+.renewal-card .card {
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.transaction-card img.network {
+    width: 45px;
+    margin-right: 10px;
+}
+
+.transaction-card h3,
+.renewal-card h3 {
+    font-size: .9rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.transaction-card .price {
+    font-weight: 600;
+}
+
+.transaction-card p,
+.renewal-card p {
+    margin: 0;
+}
+
+.transaction-card .status {
+    font-size: .8rem;
+    padding: .3rem .4rem;
+}
+
+.renewal-card {
+    margin-bottom: 6rem;
+}
+
+input.beneficiary {
+    width: 50%;
+}
+
+/* Data Styling */
+h3.option {
+    font-size: .9rem;
+    margin: 0;
+    padding: .7rem 1.5rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
+h3.option.active {
+    color: #fff;
+    background: var(--color-primary);
+}
+
+/* Search Beneficiary */
+.search-group {
+    position: relative;
+}
+.search-group input {
+    width: 100%;
+    padding: .6rem 1rem;
+    padding-left: 2.5rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+}
+.search-group i {
+    position: absolute;
+    left: 15px;
+    top: 18px;
+    color: #ccc;
+}
+
+.beneficiaries .beneficiary p {
+    margin: 0
+}
+.beneficiaries .beneficiary {
+    margin-bottom: .5rem;
+    padding: .7rem .3rem;
+}
+.beneficiaries .beneficiary:hover {
+    background: #f3f3f3;
+    cursor: pointer;
+}
+
+/* Test Result Checker */
+.nav.nav-underline .nav-link {
+    color: #888;
+}
+.nav.nav-underline .nav-link.active {
+    color: #000;
+    border-bottom-color: var(--color-primary);
+}
+
+/* Media Queries  */
+/* Airtime */
+@media (max-width: 992px) {
+    .form-head h1.title {
+        font-size: 1.3rem;
+        margin-left: 25px;
+        margin-bottom: 0;
+    }
+
+    .form-card.d-flex {
+        display: block !important;
+    }
+
+    .form-card {
+        position: relative;
+    }
+
+    .form-head {
+
+        margin-bottom: 1rem;
+    }
+
+    .form-card .opaque-card {
+        width: 200px;
+        position: absolute;
+        right: 0;
+        /* float: right; */
+    }
+
+    form.main-form {
+        margin-top: 6rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .d-flex.opaque-btns {
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+
+    .d-flex.opaque-btns>.opaque-btn {
+        align-self: flex-start;
+    }
+
+    .d-flex.opaque-btns .btns {
+        align-self: flex-end;
+    }
+
+    input.beneficiary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .d-flex.opaque-btns .opaque-btn {
+        padding: .7rem .4rem;
+    }
+
+    form.main-form {
+        margin-top: 8rem;
+    }
 }

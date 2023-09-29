@@ -1,0 +1,1426 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>ThriveNow Telneting || Buy Airtime Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+            </div>
+            <div class="p-4 pt-5">
+                <h1><a href="index.html" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a></h1>
+                <ul class="list-unstyled components mb-5">
+                    <li class="nav-item d-flex align-items-center">
+                        <object class="icon" data="images/home.svg" type="image/svg+xml" style="fill: grey"></object>
+                        <a href="index.html">Dashboard</a>
+                    </li>
+                    <li class="active nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="mobileDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <object class="icon" data="images/mobile.svg" type="image/svg+xml"></object>
+                            Mobile utilities
+                            <i class="fas fa-chevron-down ms-2"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="mobileDropdown">
+                            <a class="dropdown-item d-flex align-items-center" href="airtime.html">
+                                <object class="icon" data="images/call.svg" type="image/svg+xml"></object>
+                                Airtime top-up
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="data.html">
+                                <object class="icon" data="images/wifi-square.svg" type="image/svg+xml"></object>
+                                Data top-up
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="recharge.html">
+                                <object class="icon" data="images/hashtag.svg" type="image/svg+xml"></object>
+                                Recharge PIN
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="homeDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <object class="icon" data="images/electricity.svg" type="image/svg+xml"></object>
+                            Home utilities <i class="fas fa-chevron-down ms-2"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="homeDropdown">
+                            <a class="dropdown-item d-flex align-items-center" href="cable.html">
+                                <object class="icon" data="images/monitor-mobbile.svg" type="image/svg+xml"></object>
+                                Cable TV
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="electricity.html">
+                                <object class="icon" data="images/flash.svg" type="image/svg+xml"></object>
+                                Electricity Bills
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="educationDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <object class="icon" data="images/teacher.svg" type="image/svg+xml"></object>
+                            Education utilities <i class="fas fa-chevron-down ms-2"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="educationDropdown">
+                            <a class="dropdown-item d-flex align-items-center" href="result.html">
+                                <object class="icon" data="images/award.svg" type="image/svg+xml"></object>
+                                Result Checker
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="courses.html">
+                            <object class="icon" data="images/video-octagon.svg" type="image/svg+xml"></object>
+                            Courses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="account.html">
+                            <object class="icon" data="images/profile-circle.svg" type="image/svg+xml"></object>
+                            My Account
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="mb-5">
+                    <img src="images/customer.png" alt="customer">
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="top-alert">
+                <div class="d-flex">
+                    <span class="time">7:30 AM</span>
+                    <marquee behavior="scroll" direction="left">Welcome Back! ✨ You can now MAKE MORE MONEY using
+                        Telneting. Refer a friend
+                        now and earn 100 Telcoin. Click on the
+                        account icon, go to Refer and Earn , copy your referral link and share it with family and
+                        friends.</marquee>
+                </div>
+            </div>
+
+            <div class="data">
+                <h1 class="title">Buy Airtime</h1>
+
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                        <div class="network-card" id="data-overlay-btn">
+                            <img src="images/mtn.png" alt="mtn">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="network-card">
+                            <img src="images/airtel.png" alt="airtel">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="network-card">
+                            <img src="images/glo.png" alt="glo">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="network-card">
+                            <img src="images/9mobile.png" alt="9mobile">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-body">
+                    <table id="dataTable" class="hover">
+                        <thead>
+                            <tr>
+                                <th>Transaction</th>
+                                <th>Time</th>
+                                <th>Status</th>
+                                <th>Amount</th>
+                                <th>Method</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <p class="main-data">Airtime Purchase</p>
+                                        <span class="sub-data">MTN - 08124434343</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <p class="date">22 Jun 2020</p>
+                                        <span class="time">11:00 AM</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="status failed">
+                                        &#8226; Failed
+                                    </div>
+                                </td>
+                                <td>NGN 8.50</td>
+                                <td>Telcoin</td>
+                                <td>
+                                    <img src="images/add-filled.png" alt="add">
+                                    Action
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <p class="main-data">Airtime Purchase</p>
+                                        <span class="sub-data">Airtel - 08124434343</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <p class="date">24 Jun 2020</p>
+                                        <span class="time">11:00 AM</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="status pending">
+                                        &#8226; Pending
+                                    </div>
+                                </td>
+                                <td>NGN 8.50</td>
+                                <td>Telcoin</td>
+                                <td id="table-receipt-overlay-btn">
+                                    <img src="images/add-filled.png" alt="add">
+                                    Action
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <p class="main-data">Airtime Purchase</p>
+                                        <span class="sub-data">MTN - 08124434343</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <p class="date">23 Jun 2020</p>
+                                        <span class="time">11:00 AM</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="status success">
+                                        &#8226; Status
+                                    </div>
+                                </td>
+                                <td>NGN 8.50</td>
+                                <td>Wallet</td>
+                                <td>
+                                    <img src="images/add-filled.png" alt="add">
+                                    Action
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-sidebar" id="right-sidebar-content">
+            <div class="custom-menu right-bar" id="right-bar">
+                <button type="button" id="toggleRightSidebar" class="btn btn-primary">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Right Sidebar</span>
+                </button>
+            </div>
+            <div class="top">
+                <div class="d-flex align-items-center justify-content-around">
+                    <img src="images/notification.png" alt="notification">
+                    <div class="d-flex align-items-center">
+                        <span class="icon">
+                            E
+                        </span>
+                        <div class="dropdown">
+                            <button type="button" class="name" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>Emmanuel</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <ul class="dropdown-menu shadow-box">
+                                <li><a class="dropdown-item" href="#">My Account</a></li>
+                                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                                <hr class="my-2">
+                                <li><a class="dropdown-item" href="#">Log Out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent">
+                <h1 class="title">Recent activities</h1>
+                <h2 class="subtitle">Today</h2>
+
+                <div class="activities">
+                    <div class="activity">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img src="images/tag.png" alt="tag" style="margin-right: 5px">
+                                <div class="d-flex flex-column">
+                                    <h2 class="title">MTN Data Recharge</h2>
+                                    <p class="text-success">Success</p>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="price">-&#8358;3,000</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img src="images/tag.png" alt="tag" style="margin-right: 5px">
+                                <div class="d-flex flex-column">
+                                    <h2 class="title">MTN Mobile Top-up</h2>
+                                    <p class="text-success">Success</p>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="price">-&#8358;300</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img src="images/tag.png" alt="tag" style="margin-right: 5px">
+                                <div class="d-flex flex-column">
+                                    <h2 class="title">MTN Mobile Top-up</h2>
+                                    <p class="text-success">Success</p>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="price">-&#8358;300</h2>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <a href="#" class="btn-text">See all
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+
+                <div class="refer-card">
+                    <div class="row">
+                        <div class="col-8">
+                            <h1 class="title">Refer and Earn</h1>
+                            <p>Copy link and share with family and friends.</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="images/refer-doodle.png" alt="doodle">
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <span class="link" id="copy-link">https:/telneting.com/regist</span>
+                        </div>
+                        <div class="col-3">
+                            <button class="opaque-btn" type="button" id="copy-button">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="auto-renewals" style="visibility: hidden; opacity: 0">
+                <h1 class="title">Auto-renewals</h1>
+            
+                <div class="plans">
+                    <div class="plan-card">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="network">
+                                    <img src="images/mtn.png" alt="mtn">
+                                </div>
+            
+                                <div class="d-flex flex-column justify-content-between">
+                                    <h2 class="title">MTN Data</h2>
+                                    <p class="text-black">1.5GB &#8226; Weekly</p>
+                                </div>
+                            </div>
+            
+            
+                            <!-- <i class="fa-solid fa-ellipsis-vertical icon"></i> -->
+                            <div class="dropdown">
+                                <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-ellipsis-vertical icon"></i>
+                                </button>
+                                <ul class="dropdown-menu shadow-box">
+                                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                                    <li><a class="dropdown-item" href="#">Pause</a></li>
+                                    <li><a class="dropdown-item" href="#">Cancel</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="plan-card">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="network">
+                                    <img src="images/airtel.png" alt="mtn">
+                                </div>
+            
+                                <div class="d-flex flex-column justify-content-between">
+                                    <h2 class="title">Airtel Data</h2>
+                                    <p class="text-black">1.5GB &#8226; Weekly</p>
+                                </div>
+                            </div>
+            
+            
+                            <!-- <i class="fa-solid fa-ellipsis-vertical icon"></i> -->
+                            <div class="dropdown">
+                                <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-ellipsis-vertical icon"></i>
+                                </button>
+                                <ul class="dropdown-menu shadow-box">
+                                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                                    <li><a class="dropdown-item" href="#">Pause</a></li>
+                                    <li><a class="dropdown-item" href="#">Cancel</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="plan-card">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="network">
+                                    <img src="images/mtn.png" alt="mtn">
+                                </div>
+            
+                                <div class="d-flex flex-column justify-content-between">
+                                    <h2 class="title">MTN Airtime</h2>
+                                    <p class="text-black">500MB &#8226; Weekly</p>
+                                </div>
+                            </div>
+            
+            
+                            <!-- <i class="fa-solid fa-ellipsis-vertical icon"></i> -->
+                            <div class="dropdown">
+                                <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-ellipsis-vertical icon"></i>
+                                </button>
+                                <ul class="dropdown-menu shadow-box">
+                                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                                    <li><a class="dropdown-item" href="#">Pause</a></li>
+                                    <li><a class="dropdown-item" href="#">Cancel</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <a href="#" id="showRenewalOverlay" class="btn-text text-center w-100 d-inline-block">See all
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Data Overlays -->
+    <div class="data-overlay" id="data-overlay">
+        <div class="relative">
+            <div class="data-overlay-content overlay-content">
+                <div class="header-bg">
+                    <img src="images/networks.png" alt="networks">
+                </div>
+
+                <div class="d-flex justify-content-end pe-3 pt-3">
+                    <i class="fa-solid fa-xmark close" id="close-overlay"></i>
+                </div>
+
+                <div class="data-overlay-form">
+                    <h1 class="title">Airtime Purchase</h1>
+                    <h2 class="subtitle">Fill the Form below to get your <br /> purchase Started.</h2>
+
+                    <form action="#" class="mt-4">
+                        <div class="input-group">
+                            <label>Phone Number</label>
+                            <input type="number" placeholder="08128378112" class="data-input" />
+                            <span class="w-100 btn-text text-end underline" id="beneficiary-btn">Select from
+                                beneficiaries</span>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label>Amount</label>
+                            <input type="number" placeholder="Choose airtime amount" class="data-input" />
+                        </div>
+                        <!-- <div class="input-group">
+                            <label>Data Plan</label>
+                            <select class="data-input">
+                                <option value="1" selected disabled>Select data plan</option>
+                                <option value="2">20MB (Daily) &nbsp; #25</option>
+                                <option value="3">200MB (Daily) &nbsp; #200</option>
+                                <option value="4">1GB (Daily) &nbsp; #300</option>
+                                <option value="5">2.5GB (Two days) &nbsp; #500</option>
+                                <option value="6">6GB (Weekly) &nbsp; #1,500</option>
+                            </select>
+                        </div> -->
+
+                        <label class="checkbox" for="save">
+                            <input type="checkbox" name="save" value="save" id="save">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">
+                                Save as beneficiary
+                            </span>
+                        </label>
+
+                        <hr>
+
+                        <div class="purchase-data-card">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="number">09812832932</span>
+                                <p class="data-plan"><span class="text-primary">1.5GB</span>(#1000)</p>
+                                <div class="d-flex">
+                                    <img src="images/edit-purple.png" id="edit-btn" alt="edit">
+                                    <img src="images/close-circle.png" class="ms-2" alt="cancel">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <h6 class="w-100 btn-text text-primary my-3 text-center"> <i class="fa-solid fa-plus"></i>
+                                Add new purchase</h6>
+                            <button type="button" class="btn btn-primary w-100" id="payment-btn">
+                                Continue</button>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="beneficiary-overlay" id="beneficiary-overlay">
+                <div class="relative">
+                    <div class="beneficiary inner-overlay">
+                        <span class="line"></span>
+
+                        <div class="d-flex justify-content-end">
+                            <i class="fa-solid fa-xmark close" id="beneficiary-close"></i>
+                        </div>
+
+                        <h1 class="title text-center font-semibold mb-4">Beneficiaries</h1>
+
+                        <div class="beneficiaries">
+                            <div class="beneficiary">
+                                <div class="d-flex flex-column">
+                                    <h6 class="name">Daily MTN</h6>
+                                    <p><span class="number">20MB</span> &#183; <span>0812344556</span></p>
+                                </div>
+                            </div>
+
+                            <div class="beneficiary">
+                                <div class="d-flex flex-column">
+                                    <h6 class="name">Tosin's Airtel</h6>
+                                    <p><span class="number">08123477xx</span> &#183; <span>0812234343</span></p>
+                                </div>
+                            </div>
+
+                            <div class="beneficiary">
+                                <div class="d-flex flex-column">
+                                    <h6 class="name">Tosin's Airtel</h6>
+                                    <p><span class="number">08123477xx</span> &#183; <span>0812234343</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="edit-overlay" id="edit-overlay">
+                <div class="relative">
+                    <div class="edit inner-overlay">
+                        <span class="line"></span>
+
+                        <div class="d-flex justify-content-end">
+                            <i class="fa-solid fa-xmark close" id="edit-close"></i>
+                        </div>
+
+                        <h1 class="title text-center font-semibold mb-4">Edit</h1>
+
+                        <form action="#">
+                            <div class="input-group">
+                                <label>Phone Number</label>
+                                <input type="number" value="08128378112" class="data-input" />
+                            </div>
+
+                            <div class="input-group">
+                                <label>Data Plan</label>
+                                <select class="data-input">
+                                    <option value="1" selected disabled>Select data plan</option>
+                                    <option value="2">20MB (Daily) &nbsp; #25</option>
+                                    <option value="3">200MB (Daily) &nbsp; #200</option>
+                                    <option value="4">1GB (Daily) &nbsp; #300</option>
+                                    <option value="5">2.5GB (Two days) &nbsp; #500</option>
+                                    <option value="6">6GB (Weekly) &nbsp; #1,500</option>
+                                </select>
+                            </div>
+
+                            <button type="button" class="btn btn-primary w-100" id="edit-close2">
+                                Continue</button>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="payment-overlay" id="payment-overlay">
+                <div class="relative">
+                    <div class="payment inner-overlay">
+                        <span class="line"></span>
+
+                        <div class="d-flex justify-content-end">
+                            <i class="fa-solid fa-xmark close" id="payment-close"></i>
+                        </div>
+
+                        <h1 class="title">Payment Option</h1>
+                        <h2 class="subtitle">Select a payment option</h2>
+
+                        <ul class="payment-cards">
+                            <li>
+                                <input type="radio" id="f-option" name="selector">
+                                <label for="f-option">
+                                    <div class="payment-card blue">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/wallet.png" alt="wallet">
+                                            <span class="ps-2">Your balance</span>
+                                        </div>
+
+                                        <div class="d-flex align-items-center">
+                                            <h1 class="amount">&#8358; 32,000.00</h1>
+                                            <img src="images/eye.png" alt="eye">
+                                        </div>
+                                    </div>
+                                </label>
+
+                                <div class="check"></div>
+                            </li>
+
+                            <li>
+                                <input type="radio" id="s-option" name="selector">
+                                <label for="s-option">
+                                    <div class="payment-card orange">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/coin.png" alt="coin">
+                                            <span class="ps-2">Available Earnings</span>
+                                        </div>
+
+                                        <div class="d-flex align-items-center">
+                                            <h1 class="amount">&#8358; 900.00</h1>
+                                        </div>
+                                    </div>
+                                </label>
+
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button class="btn btn-primary w-100" id="confirm-overlay-btn">Continue</button>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="confirm-overlay" id="confirm-overlay">
+                <div class="relative">
+                    <div class="confirm inner-overlay">
+                        <span class="line"></span>
+
+                        <div class="d-flex justify-content-end">
+                            <i class="fa-solid fa-xmark close" id="confirm-close"></i>
+                        </div>
+
+                        <h1 class="title text-center font-semibold mb-4">Confirm details</h1>
+
+                        <form action="#">
+                            <div class="input-group">
+                                <label>Payment option</label>
+                                <input type="text" value="Wallet" class="data-input" disabled />
+                            </div>
+
+                            <div class="input-group">
+                                <label>Category</label>
+                                <input type="text" value="Mobile Top-up" class="data-input" disabled />
+                            </div>
+
+                            <div class="input-group">
+                                <label>Carrier Name</label>
+                                <input type="text" value="MTN" class="data-input" disabled />
+                            </div>
+
+                            <div class="input-group">
+                                <label>Transaction date</label>
+                                <input type="text" value="28th September, 2022" class="data-input" disabled />
+                            </div>
+
+                            <div class="input-group">
+                                <label>Amount</label>
+                                <input type="text" value="N 250" class="data-input" disabled />
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <img src="images/number.png" alt="number">
+                                <div class="input-group ps-2">
+                                    <label>Phone number</label>
+                                    <input type="number" value="081289327327" class="data-input" disabled />
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-primary w-100" id="transaction-overlay-btn">
+                                Pay</button>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="transaction-overlay" id="transaction-overlay">
+                <div class="relative">
+                    <div class="transaction inner-overlay">
+                        <div class="text-center">
+
+                            <img src="images/avatar.png" alt="avatar">
+                            <h3 class="title">Enter your transaction pin to proceed <br /> with this transaction.</h3>
+
+                            <div class="number-input">
+                                <input type="text" maxlength="1" id="box1">
+                                <input type="text" maxlength="1" id="box2">
+                                <input type="text" maxlength="1" id="box3">
+                                <input type="text" maxlength="1" id="box4">
+                            </div>
+
+                            <button class="btn btn-primary w-100" id="status-overlay-btn">Pay</button>
+                            <button class="btn-text text-danger" id="transaction-close">Cancel</button>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="status-overlay" id="status-overlay">
+                <div class="relative">
+                    <div class="status inner-overlay">
+                        <div class="text-center">
+                            <div class="d-flex justify-content-end">
+                                <i class="fa-solid fa-xmark close" id="status-close"></i>
+                            </div>
+
+                            <img src="images/icon-success.png" alt="avatar">
+                            <h3 class="title">Enter your transaction pin to proceed <br /> with this transaction.</h3>
+
+                            <button class="btn-text text-primary" id="setup-overlay-btn">Setup Auto-renewal</button>
+                            <button class="btn btn-primary w-100" id="receipt-overlay-btn">Generate Receipt</button>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="receipt-overlay" id="receipt-overlay">
+                <div class="relative">
+                    <div class="receipt inner-overlay">
+                        <div class="text-center">
+                            <div class="d-flex justify-content-end">
+                                <i class="fa-solid fa-xmark close" id="receipt-close"></i>
+                            </div>
+
+                            <img src="images/Receipt.png" alt="receipt">
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <button class="opaque-btn w-100">
+                                        <img src="images/gallery.png" alt="gallery">
+                                        Download as an image
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button class="opaque-btn w-100">
+                                        <img src="images/document.png" alt="document">
+                                        Download as PDF
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="setup-overlay" id="setup-overlay">
+                <div class="relative">
+                    <div class="setup inner-overlay">
+                        <div>
+                            <div class="d-flex justify-content-end">
+                                <i class="fa-solid fa-xmark close" id="setup-close"></i>
+                            </div>
+
+                            <h1 class="title font-semibold mb-4">Auto-renewal</h1>
+                            <h3 class="subtitle mb-4">Choose how you want to renew <br /> your airtime recharge.</h3>
+
+                            <form action="#">
+                                <ul>
+                                    <li class="d-flex radio-input">
+                                        <label for="daily">Daily</label>
+                                        <input type="radio" name="renewal" id="daily">
+
+                                        <div class="check">
+                                            <div class="inside"></div>
+                                        </div>
+                                    </li>
+
+                                    <li class="d-flex radio-input">
+                                        <label for="weekly">Weekly</label>
+                                        <input type="radio" name="renewal" id="weekly">
+
+                                        <div class="check">
+                                            <div class="inside"></div>
+                                        </div>
+                                    </li>
+
+                                    <li class="d-flex radio-input">
+                                        <label for="monthly">Monthly</label>
+                                        <input type="radio" name="renewal" id="monthly">
+
+                                        <div class="check">
+                                            <div class="inside"></div>
+                                        </div>
+                                    </li>
+                                    <li class="radio-input" id="recur-btn">
+                                        <span>Set Recurring days</span>
+                                    </li>
+                                </ul>
+
+                                <button type="button" class="btn btn-primary w-100" id="edit-close2">
+                                    Continue</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="recur-overlay" id="recur-overlay">
+                <div class="relative">
+                    <div class="recur inner-overlay">
+                        <span class="line"></span>
+
+                        <div class="d-flex justify-content-end">
+                            <i class="fa-solid fa-xmark close" id="recur-close"></i>
+                        </div>
+
+                        <h1 class="title font-semibold mb-4">Set recurring days</h1>
+                        <p>I want my subcription to renew every...</p>
+
+                        <form action="#">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" data-type="minus"
+                                        data-field="quantity">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </button>
+                                </span>
+                                <input type="number" id="quantity" name="quantity" class="form-control input-number"
+                                    value="1">
+                                <span class="opaque-text">days</span>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number plus" data-type="plus"
+                                        data-field="quantity">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </span>
+                            </div>
+
+                            <button type="button" class="btn btn-primary w-100" id="edit-close2">
+                                Continue</button>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-receipt-overlay" id="table-receipt-overlay">
+        <div class="relative">
+            <div class="receipt overlay-content">
+                <div class="text-center">
+                    <div class="d-flex justify-content-end">
+                        <i class="fa-solid fa-xmark close" id="close-table-receipt"></i>
+                    </div>
+
+                    <img src="images/Receipt.png" alt="receipt">
+
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="opaque-btn w-100">
+                                <img src="images/gallery.png" alt="gallery">
+                                Download as an image
+                            </button>
+                        </div>
+                        <div class="col-6">
+                            <button class="opaque-btn w-100">
+                                <img src="images/document.png" alt="document">
+                                Download as PDF
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- The Renewal overlay container -->
+    <div id="renewalOverlay" class="overlay">
+        <div class="relative">
+            <div class="overlay-content">
+                <div class="d-flex justify-content-end">
+                    <i class="fa-solid fa-xmark close" id="close-renewal-overlay"></i>
+                </div>
+
+
+                <div class="renewals">
+                    <h1 class="title">Auto-renewals</h1>
+                    <p>Mobile top-up auto-renewals</p>
+
+
+                    <div class="d-flex align-items-center justify-content-between w-75">
+                        <div class="plan-card">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <div class="network">
+                                        <img src="images/mtn.png" alt="mtn">
+                                    </div>
+
+                                    <div class="d-flex flex-column justify-content-between ms-3">
+                                        <h2 class="title">MTN Airtime</h2>
+                                        <p class="text-black">&#8358;500.00 &#8226; Weekly</p>
+                                        <p>Next top-up - Sept 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <img src="images/pause.png" id="pause-btn" alt="pause">
+                        <img src="images/cancel.png" id="cancel-btn" alt="cancel">
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between w-75">
+                        <div class="plan-card">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <div class="network">
+                                        <img src="images/airtel.png" alt="airtel">
+                                    </div>
+
+                                    <div class="d-flex flex-column justify-content-between ms-3">
+                                        <h2 class="title">Airtel Airtime</h2>
+                                        <p class="text-black">&#8358;500.00 &#8226; Weekly</p>
+                                        <p>Next top-up - Sept 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <img src="images/pause.png" id="pause-btn" alt="pause">
+                        <img src="images/cancel.png" id="cancel-btn" alt="cancel">
+                    </div>
+                </div>
+
+                <div class="cancel-overlay" id="cancel-overlay">
+                    <div class="relative">
+                        <div class="cancel inner-overlay">
+                            <span class="line"></span>
+
+                            <div class="d-flex justify-content-end">
+                                <i class="fa-solid fa-xmark close" id="cancel-close"></i>
+                            </div>
+
+                            <h1 class="title">Cancel auto-renewals</h1>
+                            <h2 class="subtitle">Are you sure you want to cancel this Data auto-renewal?</h2>
+
+                            <button type="button" class="btn btn-primary w-100" id="cancelled-btn">Cancel
+                                Auto-renewals</button>
+                            <button class="btn-text text-center w-100 d-inline-block" id="cancel-close2">Close</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cancelled-overlay" id="cancelled-overlay">
+                    <div class="relative">
+                        <div class="cancelled inner-overlay">
+                            <div class="d-flex justify-content-end">
+                                <i class="fa-solid fa-xmark close" id="close-cancelled-btn"></i>
+                            </div>
+
+                            <div class="text-center">
+                                <img src="images/icon-success.png" alt="success">
+
+                                <h1 class="title">MTN auto renewal <br /> has been cancelled successfully.</h1>
+
+                                <button type="button" class="btn btn-primary w-100"
+                                    id="close-cancelled-btn2">Done</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pause-overlay" id="pause-overlay">
+                    <div class="relative">
+                        <div class="pause inner-overlay">
+                            <span class="line"></span>
+
+                            <div class="d-flex justify-content-end">
+                                <i class="fa-solid fa-xmark close" id="pause-close"></i>
+                            </div>
+
+                            <h1 class="title">Pause auto-renewals</h1>
+                            <h2 class="subtitle">Are you sure you want to pause this Data auto-renewal?</h2>
+
+                            <button type="button" class="btn btn-primary w-100" id="paused-btn">Pause
+                                Auto-renewals</button>
+                            <button class="btn-text text-center w-100 d-inline-block" id="pause-close2">Close</button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="paused-overlay" id="paused-overlay">
+                    <div class="relative">
+                        <div class="paused inner-overlay">
+                            <div class="d-flex justify-content-end">
+                                <i class="fa-solid fa-xmark close" id="close-paused-btn"></i>
+                            </div>
+
+                            <div class="text-center">
+                                <img src="images/pause-circle.png" alt="success">
+
+                                <h1 class="title">MTN auto renewal <br /> has been paused successfully.</h1>
+
+                                <button type="button" class="btn btn-primary w-100" id="close-paused-btn2">Done</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        const rightToggle = document.getElementById('right-bar');
+        const rightBar = document.getElementById('right-sidebar-content')
+
+        rightToggle.addEventListener('click', function () {
+            rightBar.classList.toggle('hide')
+        })
+    </script>
+    <script>
+        // Get the input element and plus/minus buttons
+        const inputElement = document.getElementById("quantity");
+        const minusButton = document.querySelector(".btn-number[data-type='minus']");
+        const plusButton = document.querySelector(".btn-number[data-type='plus']");
+
+        // Add click event listeners to the minus and plus buttons
+        minusButton.addEventListener("click", function () {
+            decreaseValue();
+        });
+
+        plusButton.addEventListener("click", function () {
+            increaseValue();
+        });
+
+        // Function to decrease the value
+        function decreaseValue() {
+            let currentValue = parseInt(inputElement.value, 10);
+            if (!isNaN(currentValue) && currentValue > 1) {
+                inputElement.value = currentValue - 1;
+            }
+        }
+
+        // Function to increase the value
+        function increaseValue() {
+            let currentValue = parseInt(inputElement.value, 10);
+            if (!isNaN(currentValue)) {
+                inputElement.value = currentValue + 1;
+            }
+        }
+    </script>
+
+    <script>
+        let table = new DataTable('#dataTable');
+        // Input Boxes
+
+        const inputBoxes = document.querySelectorAll('.number-input input');
+
+        inputBoxes.forEach((box, index) => {
+            box.addEventListener('input', (e) => {
+                if (e.target.value.length > 1) {
+                    e.target.value = e.target.value.slice(0, 1);
+                }
+
+                if (index < inputBoxes.length - 1 && e.target.value !== '') {
+                    inputBoxes[index + 1].focus();
+                }
+            });
+
+            box.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && e.target.value === '' && index > 0) {
+                    inputBoxes[index - 1].focus();
+                }
+            });
+        });
+
+        // Data Overlays
+        const dataOverlayClick = document.getElementById('data-overlay-btn')
+        const dataOverlay = document.getElementById('data-overlay')
+        const closeDataOverlay = document.getElementById('close-overlay')
+
+        function showDataOverlay() {
+            dataOverlay.style.right = '0';
+        }
+
+        // Function to hide the pause overlay (slide down)
+        function hideDataOverlay() {
+            dataOverlay.style.right = '-100%';
+        }
+        // Show the pause overlay when the pause button is clicked
+        dataOverlayClick.addEventListener('click', showDataOverlay);
+
+        // Hide the pause overlay when the close button is clicked
+        closeDataOverlay.addEventListener('click', hideDataOverlay);
+
+        const tableReceiptClick = document.getElementById('table-receipt-overlay-btn');
+        const tableReceiptOverlay = document.getElementById('table-receipt-overlay');
+        const closeTableReceipt = document.getElementById('close-table-receipt');
+
+        function showTableReceipt() {
+            tableReceiptOverlay.style.right = '0';
+        }
+        function hideTableReceipt() {
+            tableReceiptOverlay.style.right = '-100%';
+        }
+
+        tableReceiptClick.addEventListener('click', showTableReceipt);
+        closeTableReceipt.addEventListener('click', hideTableReceipt);
+
+        // Get the elements for Renewals
+        const renewalOverlayBtn = document.getElementById('showRenewalOverlay');
+        const renewalOverlay = document.getElementById('renewalOverlay')
+        const closeRenewalOverlayBtn = document.getElementById('close-renewal-overlay')
+
+        const pauseBtn = document.getElementById('pause-btn');
+        const pauseOverlay = document.getElementById('pause-overlay');
+        const closePauseOverlayButton = document.getElementById('pause-close');
+        const closePause2OverlayButton = document.getElementById('pause-close2');
+
+        const cancelBtn = document.getElementById('cancel-btn');
+        const cancelOverlay = document.getElementById('cancel-overlay');
+        const closeCancelOverlayButton = document.getElementById('cancel-close');
+        const closeCancel2OverlayButton = document.getElementById('cancel-close2');
+
+        const pausedOverlay = document.getElementById('paused-overlay');
+        const pausedBtn = document.getElementById('paused-btn');
+        const closePausedOverlay = document.getElementById('close-paused-btn')
+        const closePaused2Overlay = document.getElementById('close-paused-btn2')
+
+        const cancelledOverlay = document.getElementById('cancelled-overlay');
+        const cancelledBtn = document.getElementById('cancelled-btn');
+        const closeCancelledOverlay = document.getElementById('close-cancelled-btn')
+        const closeCancelled2Overlay = document.getElementById('close-cancelled-btn2')
+
+        const beneficiaryBtn = document.getElementById('beneficiary-btn');
+        const beneficiaryOverlay = document.getElementById('beneficiary-overlay');
+        const closeBeneficiaryOverlay = document.getElementById('beneficiary-close');
+
+        const editBtn = document.getElementById('edit-btn');
+        const editOverlay = document.getElementById('edit-overlay');
+        const closeEditOverlay = document.getElementById('edit-close');
+        const closeEditOverlay2 = document.getElementById('edit-close2');
+
+        const paymentBtn = document.getElementById('payment-btn');
+        const paymentOverlay = document.getElementById('payment-overlay');
+        const closePaymentOverlay = document.getElementById('payment-close');
+
+        const confirmBtn = document.getElementById('confirm-overlay-btn');
+        const confirmOverlay = document.getElementById('confirm-overlay');
+        const closeConfirmOverlay = document.getElementById('confirm-close');
+
+        const transactionBtn = document.getElementById('transaction-overlay-btn');
+        const transactionOverlay = document.getElementById('transaction-overlay');
+        const closeTransactionOverlay = document.getElementById('transaction-close');
+
+        const statusBtn = document.getElementById('status-overlay-btn');
+        const statusOverlay = document.getElementById('status-overlay');
+        const closeStatusOverlay = document.getElementById('status-close');
+
+        const receiptBtn = document.getElementById('receipt-overlay-btn');
+        const receiptOverlay = document.getElementById('receipt-overlay');
+        const closeReceiptOverlay = document.getElementById('receipt-close');
+
+        const setupBtn = document.getElementById('setup-overlay-btn');
+        const setupOverlay = document.getElementById('setup-overlay');
+        const closeSetupOverlay = document.getElementById('setup-close');
+
+        const recurBtn = document.getElementById('recur-btn');
+        const recurOverlay = document.getElementById('recur-overlay');
+        const closeRecurOverlay = document.getElementById('recur-close');
+
+        // Function to show the pause overlay (slide up)
+        function showOverlay() {
+            renewalOverlay.style.right = '0';
+        }
+
+        // Function to hide the pause overlay (slide down)
+        function hideOverlay() {
+            renewalOverlay.style.right = '-100%';
+        }
+
+
+        // Show the pause overlay when the pause button is clicked
+        renewalOverlayBtn.addEventListener('click', showOverlay);
+
+        // Hide the pause overlay when the close button is clicked
+        closeRenewalOverlayBtn.addEventListener('click', hideOverlay);
+
+        // Function to show the pause overlay (slide up)
+        function showPauseOverlay() {
+            pauseOverlay.style.bottom = '0';
+        }
+
+        // Function to hide the pause overlay (slide down)
+        function hidePauseOverlay() {
+            pauseOverlay.style.bottom = '-100%';
+        }
+
+        // Function to show the pause overlay (slide up)
+        function showCancelOverlay() {
+            cancelOverlay.style.bottom = '0';
+        }
+
+        // Function to hide the pause overlay (slide down)
+        function hideCancelOverlay() {
+            cancelOverlay.style.bottom = '-100%';
+        }
+
+
+        // Show the pause overlay when the pause button is clicked
+        pauseBtn.addEventListener('click', showPauseOverlay);
+
+        // Hide the pause overlay when the close button is clicked
+        closePauseOverlayButton.addEventListener('click', hidePauseOverlay);
+        closePause2OverlayButton.addEventListener('click', hidePauseOverlay);
+
+        // Show the pause overlay when the pause button is clicked
+        cancelBtn.addEventListener('click', showCancelOverlay);
+
+        // Hide the pause overlay when the close button is clicked
+        closeCancelOverlayButton.addEventListener('click', hideCancelOverlay);
+        closeCancel2OverlayButton.addEventListener('click', hideCancelOverlay);
+
+        // Function to show the pause overlay (slide up)
+        function showPausedOverlay() {
+            pausedOverlay.style.bottom = '0';
+        }
+
+        // Function to hide the pause overlay (slide down)
+        function hidePausedOverlay() {
+            pausedOverlay.style.bottom = '-100%';
+        }
+
+        // Show the pause overlay when the pause button is clicked
+        pausedBtn.addEventListener('click', showPausedOverlay);
+
+        // Hide the pause overlay when the close button is clicked
+        closePausedOverlay.addEventListener('click', hidePausedOverlay);
+        closePaused2Overlay.addEventListener('click', hidePausedOverlay);
+
+
+        // Function to show the pause overlay (slide up)
+        function showCancelledOverlay() {
+            cancelledOverlay.style.bottom = '0';
+        }
+
+        // Function to hide the pause overlay (slide down)
+        function hideCancelledOverlay() {
+            cancelledOverlay.style.bottom = '-100%';
+        }
+
+        // Show the pause overlay when the pause button is clicked
+        cancelledBtn.addEventListener('click', showCancelledOverlay);
+
+        // Hide the pause overlay when the close button is clicked
+        closeCancelledOverlay.addEventListener('click', hideCancelledOverlay);
+        closeCancelled2Overlay.addEventListener('click', hideCancelledOverlay);
+
+
+        function showBeneficiaryOverlay() {
+            beneficiaryOverlay.style.bottom = '0';
+        }
+
+        // Function to hide the pause overlay (slide down)
+        function hideBeneficiaryOverlay() {
+            beneficiaryOverlay.style.bottom = '-100%';
+        }
+
+        // Show the pause overlay when the pause button is clicked
+        beneficiaryBtn.addEventListener('click', showBeneficiaryOverlay);
+        closeBeneficiaryOverlay.addEventListener('click', hideBeneficiaryOverlay);
+
+        function showEditOverlay() {
+            editOverlay.style.bottom = '0';
+        }
+        function hideEditOverlay() {
+            editOverlay.style.bottom = '-100%';
+        }
+
+        // Show the pause overlay when the pause button is clicked
+        editBtn.addEventListener('click', showEditOverlay);
+        closeEditOverlay.addEventListener('click', hideEditOverlay);
+        closeEditOverlay2.addEventListener('click', hideEditOverlay);
+
+        function showPaymentOverlay() {
+            paymentOverlay.style.bottom = '0';
+        }
+        function hidePaymentOverlay() {
+            paymentOverlay.style.bottom = '-100%';
+        }
+
+        // Show the pause overlay when the pause button is clicked
+        paymentBtn.addEventListener('click', showPaymentOverlay);
+        closePaymentOverlay.addEventListener('click', hidePaymentOverlay);
+
+        function showConfirmOverlay() {
+            confirmOverlay.style.bottom = '0';
+        }
+        function hideConfirmOverlay() {
+            confirmOverlay.style.bottom = '-100%';
+        }
+
+        // Show the pause overlay when the pause button is clicked
+        confirmBtn.addEventListener('click', showConfirmOverlay);
+        closeConfirmOverlay.addEventListener('click', hideConfirmOverlay);
+
+
+        function showTransactionOverlay() {
+            transactionOverlay.style.bottom = '0';
+        }
+        function hideTransactionOverlay() {
+            transactionOverlay.style.bottom = '-100%';
+        }
+
+        // Show the pause overlay when the pause button is clicked
+        transactionBtn.addEventListener('click', showTransactionOverlay);
+        closeTransactionOverlay.addEventListener('click', hideTransactionOverlay);
+
+        function showStatusOverlay() {
+            statusOverlay.style.bottom = '0';
+        }
+        function hideStatusOverlay() {
+            statusOverlay.style.bottom = '-100%';
+        }
+
+        // Show the pause overlay when the pause button is clicked
+        statusBtn.addEventListener('click', showStatusOverlay);
+        closeStatusOverlay.addEventListener('click', hideStatusOverlay);
+
+        function showReceiptOverlay() {
+            receiptOverlay.style.bottom = '0';
+        }
+        function hideReceiptOverlay() {
+            receiptOverlay.style.bottom = '-100%';
+        }
+
+        // Show the pause overlay when the pause button is clicked
+        receiptBtn.addEventListener('click', showReceiptOverlay);
+        closeReceiptOverlay.addEventListener('click', hideReceiptOverlay);
+
+        function showSetupOverlay() {
+            setupOverlay.style.bottom = '0';
+        }
+        function hideSetupOverlay() {
+            setupOverlay.style.bottom = '-100%';
+        }
+
+        // Show the pause overlay when the pause button is clicked
+        setupBtn.addEventListener('click', showSetupOverlay);
+        closeSetupOverlay.addEventListener('click', hideSetupOverlay);
+
+        function showRecurOverlay() {
+            recurOverlay.style.bottom = '0';
+        }
+        function hideRecurOverlay() {
+            recurOverlay.style.bottom = '-100%';
+        }
+
+        // Show the pause overlay when the pause button is clicked
+        recurBtn.addEventListener('click', showRecurOverlay);
+        closeRecurOverlay.addEventListener('click', hideRecurOverlay);
+    </script>
+</body>
+
+</html>
