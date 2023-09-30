@@ -281,7 +281,7 @@
                         
                         <div class="course-progress">
                             <div class="card">
-                                <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center justify-content-between flex-wrap">
                                     <div class="d-flex align-items-start">
                                         <img src="images/flag-box.png" alt="flag" class="me-3">
                                         <div>
@@ -290,7 +290,7 @@
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-primary d-flex align-items-center justify-content-center">
+                                    <button class="btn btn-primary d-flex align-items-center justify-content-center course-btn">
                                         <img src="images/video-circle-white.png" alt="video icon" class="me-2 d-inline-block">
                                         Continue
                                     </button>
@@ -304,20 +304,24 @@
                         
                         <div class="course-completed">
                             <div class="card">
-                                <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center justify-content-between flex-wrap">
                                     <div class="d-flex align-items-start">
                                         <img src="images/flag-box.png" alt="flag" class="me-3">
                                         <div>
                                             <span>Completed | 1 of 4</span>
                                             <h2>Sales</h2>
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/tick-circle.png" alt="check" class="me-1">
-                                                <p class="m-0">Great Work! You have completed this lesson, you’re one step closer to start your own business</p>
-                                            </div>
+                                            <p class="m-0 main-remark"> <img src="images/tick-circle.png" alt="check" class="me-1 img-transform"> Great Work! You have completed this lesson,
+                                                you’re one step closer to start your own business</p>
                                         </div>
                                     </div>
+
+                                    <div class="remark">
+                                        <h5>Remark</h5>
+                                        <p><img src="images/tick-circle.png" alt="check" class="me-1 img-transform"> Great Work! You have completed this lesson,
+                                        you’re one step closer to start your own business</p>
+                                    </div>
                         
-                                    <button class="btn btn-primary d-flex align-items-center justify-content-center">
+                                    <button class="btn btn-primary d-flex align-items-center justify-content-center course-btn">
                                         View Certificate
                                     </button>
                                 </div>
@@ -329,13 +333,7 @@
             </div>
         </div>
 
-        <div class="right-sidebar" id="right-sidebar-content">
-            <div class="custom-menu right-bar" id="right-bar">
-                <button type="button" id="toggleRightSidebar" class="btn btn-primary">
-                    <i class="fa fa-bars"></i>
-                    <span class="sr-only">Toggle Right Sidebar</span>
-                </button>
-            </div>
+        <div class="right-sidebar d-none d-md-block" id="right-sidebar-content">
             <div class="top">
                 <div class="d-flex align-items-center justify-content-around">
                     <img src="images/notification.png" alt="notification">

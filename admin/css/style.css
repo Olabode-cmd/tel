@@ -221,6 +221,14 @@ span.line {
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7496%) hue-rotate(183deg) brightness(97%) contrast(99%);
 }
 
+/* Inputs */
+input.form-control:focus,
+select.form-select:focus {
+    outline: transparent !important;
+    border: 1px solid var(--color-primary);
+    box-shadow: none;
+}
+
 /* Side Bar */
 
 #sidebar {
@@ -437,7 +445,7 @@ a[data-toggle="collapse"] {
 }
 
 .form-control {
-    height: 40px !important;
+    /* height: 40px !important; */
     background: #fff;
     color: #000;
     font-size: 13px;
@@ -584,8 +592,8 @@ a[data-toggle="collapse"] {
 }
 
 .right-sidebar .recent h1.title {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 500;
     color: #000;
 }
 
@@ -1045,7 +1053,7 @@ form.main-form {
 /* Plans Card Auto Renewals */
 .auto-renewals h1.title {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 1rem;
 }
 
@@ -1053,7 +1061,7 @@ form.main-form {
     background: #F3F6FA;
     padding: .5rem;
     border-radius: 4px;
-    margin: .5rem 0;
+    margin: .5rem 0 1rem;
 }
 
 .overlay .plan-card {
@@ -1071,7 +1079,7 @@ form.main-form {
 
 .plan-card h2.title {
     font-size: .9rem;
-    font-weight: 600;
+    font-weight: 400;
     margin: 0;
 }
 
@@ -1081,6 +1089,8 @@ form.main-form {
 
 .plan-card p {
     margin: 0;
+    color: #888;
+    font-weight: 500;
 }
 
 .plan-card button {
@@ -1901,7 +1911,8 @@ table .time {
 
 .course-card .course-title {
     margin: 1rem 0;
-    font-size: 1.4rem;
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 
 .course-card .btn {
@@ -1976,6 +1987,8 @@ table .time {
 .course-progress .card h2,
 .course-completed .card h2 {
     margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .sidebar-progress {
@@ -1983,7 +1996,7 @@ table .time {
 }
 
 .sidebar-progress h1.title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -1997,13 +2010,35 @@ table .time {
 .sidebar-progress h5 {
     margin: 0;
     font-weight: 600;
+    font-size: 1rem;
 }
 
 .sidebar-progress img {
     background: #fff;
     border-radius: 50%;
 }
-
+.remark {
+    display: none;
+}
+.remark h5 {
+    font-size: .9rem;
+    font-weight: 500;
+    margin-top: 5px;
+}
+@media (max-width: 992px) {
+    .course-btn {
+        margin-top: 1rem;
+    }
+    .remark {
+        display: block;
+    }
+    .main-remark {
+        display: none;
+    }
+}
+.img-transform {
+    transform: translateY(-2px)
+}
 
 /* Accounts Page */
 .settings h1.title {
@@ -2102,7 +2137,8 @@ table .time {
 }
 
 .settings .tab-content input.form-control {
-    padding: 1.5rem 1rem;
+    padding: .9rem 1rem;
+    margin-bottom: .5rem;
 }
 
 .settings .tab-content h5 {
@@ -2373,5 +2409,40 @@ h3.option.active {
 
     form.main-form {
         margin-top: 8rem;
+    }
+}
+
+
+/* Tabs to Dropdown */
+@media (max-width: 776px) {
+    .nav-wrapper {
+        /* padding: .2rem .3rem; */
+        background: #fff;
+        border-radius: 14px;
+        margin: 1rem 0;
+        overflow-x: scroll;
+        width: 100%;
+        padding: .4rem;
+        padding-right: 2rem;
+    }
+
+    .settings .nav .nav-link {
+        margin: .5rem;
+        display: block;
+        min-width: 200px;
+        max-width: 300px;
+        padding: .5rem 1rem;
+    }
+    .settings .nav .nav-link.active {
+        border: 1px solid var(--color-primary);
+    }
+
+    .settings .nav-wrapper .nav.flex-column {
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+    }
+
+    .settings .tab-content .card {
+        width: 100%;
     }
 }
