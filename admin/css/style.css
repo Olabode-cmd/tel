@@ -70,6 +70,7 @@ button {
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
+    border: none;
 }
 
 button:hover,
@@ -1057,6 +1058,10 @@ form.main-form {
     margin-top: 1rem;
 }
 
+#renewal .modal-header h1.modal-title {
+    font-size: 1.3rem;
+}
+
 .plan-card {
     background: #F3F6FA;
     padding: .5rem;
@@ -1068,13 +1073,22 @@ form.main-form {
     width: 75%;
 }
 
+#renewal .plan-card {
+    background: #fff;
+    width: 70%;
+}
+#renewal .plan-card .network img {
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    /* width: 250px; */
+}
 .plan-card .network {
     height: auto;
     border-radius: 3px;
     overflow: hidden;
     background: #fff;
     margin-right: 10px;
-    width: 50px;
+    width: 60px;
 }
 
 .plan-card h2.title {
@@ -2348,6 +2362,30 @@ h3.option.active {
     color: #000;
     border-bottom-color: var(--color-primary);
 }
+/* Fund Wallet */
+.modal-body .fund-modal li {
+    list-style-type: none;
+    margin-bottom: .75rem;
+    padding: .3rem .3rem .3rem;
+}
+.modal-body .fund-modal li:hover {
+    background: #f8f8f8;
+    cursor: pointer;
+}
+.modal-body .fund-modal {
+    padding-left: 0;
+}
+.modal-body .fund-modal li h5 {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 500;
+}
+.modal-body .fund-modal li p {
+    margin: 0;
+}
+.modal-title {
+    font-weight: 500;
+}
 
 /* Media Queries  */
 /* Airtime */
@@ -2429,9 +2467,10 @@ h3.option.active {
     .settings .nav .nav-link {
         margin: .5rem;
         display: block;
-        min-width: 200px;
+        min-width: 250px;
         max-width: 300px;
-        padding: .5rem 1rem;
+        padding: .5rem;
+        font-size: .9rem;
     }
     .settings .nav .nav-link.active {
         border: 1px solid var(--color-primary);

@@ -8,8 +8,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -928,10 +928,69 @@
                         </div>
                     </div>
 
-                    <button type="button" id="showRenewalOverlay" class="btn-text text-center w-100 d-inline-block">See
-                        all
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#renewal" class="btn-text text-center w-100 d-inline-block">See all
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
+
+                    <div class="modal fade" id="renewal" tabindex="-1" aria-labelledby="renewalLabel" data-bs-backdrop="static"
+                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title" id="exampleModalLabel">
+                                        Auto Renewals
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="renewals">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="plan-card">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="network">
+                                                            <img src="images/mtn.png" alt="mtn">
+                                                        </div>
+                                    
+                                                        <div class="d-flex flex-column justify-content-between ms-3">
+                                                            <h2 class="title">MTN Airtime</h2>
+                                                            <p class="text-black">&#8358;500.00 &#8226; Weekly</p>
+                                                            <p>Next top-up - Sept 3</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <img src="images/pause.png" data-bs-target="#pauseModal" data-bs-toggle="modal" alt="pause">
+                                            <img src="images/cancel.png" data-bs-target="#cancelModal" data-bs-toggle="modal" alt="cancel">
+                                        </div>
+                                    
+                                    
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="plan-card">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="network">
+                                                            <img src="images/airtel.png" alt="airtel">
+                                                        </div>
+                                    
+                                                        <div class="d-flex flex-column justify-content-between ms-3">
+                                                            <h2 class="title">Airtel Airtime</h2>
+                                                            <p class="text-black">&#8358;500.00 &#8226; Weekly</p>
+                                                            <p>Next top-up - Sept 3</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <img src="images/pause.png" id="pause-btn" alt="pause">
+                                            <img src="images/cancel.png" id="cancel-btn" alt="cancel">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -1015,132 +1074,10 @@
         </div>
     </div>
 
-
-    <!-- The overlay container -->
-    <div id="renewalOverlay" class="overlay">
-        <div class="relative d-none d-md-block">
-            <div class="overlay-content">
-                <div class="d-flex justify-content-end">
-                    <i class="fa-solid fa-xmark close" id="close-renewal-overlay"></i>
-                </div>
-
-
-                <div class="renewals">
-                    <h1 class="title">Auto-renewals</h1>
-                    <p>Mobile top-up auto-renewals</p>
-
-
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="plan-card">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center">
-                                    <div class="network">
-                                        <img src="images/mtn.png" alt="mtn">
-                                    </div>
-
-                                    <div class="d-flex flex-column justify-content-between ms-3">
-                                        <h2 class="title">MTN Airtime</h2>
-                                        <p class="text-black">&#8358;500.00 &#8226; Weekly</p>
-                                        <p>Next top-up - Sept 3</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <img src="images/pause.png" id="pause-btn" alt="pause">
-                        <img src="images/cancel.png" id="cancel-btn" alt="cancel">
-                    </div>
-                </div>
-
-                <div class="cancel-overlay" id="cancel-overlay">
-                    <div class="relative">
-                        <div class="cancel inner-overlay">
-                            <span class="line"></span>
-
-                            <div class="d-flex justify-content-end">
-                                <i class="fa-solid fa-xmark close" id="cancel-close"></i>
-                            </div>
-
-                            <h1 class="title">Cancel auto-renewals</h1>
-                            <h2 class="subtitle">Are you sure you want to cancel this Data auto-renewal?</h2>
-
-                            <button type="button" class="btn btn-primary w-100" id="cancelled-btn">Cancel
-                                Auto-renewals</button>
-                            <button class="btn-text text-center w-100 d-inline-block" id="cancel-close2">Close</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cancelled-overlay" id="cancelled-overlay">
-                    <div class="relative">
-                        <div class="cancelled inner-overlay">
-                            <div class="d-flex justify-content-end">
-                                <i class="fa-solid fa-xmark close" id="close-cancelled-btn"></i>
-                            </div>
-
-                            <div class="text-center">
-                                <img src="images/icon-success.png" alt="success">
-
-                                <h1 class="title">MTN auto renewal <br /> has been cancelled successfully.</h1>
-
-                                <button type="button" class="btn btn-primary w-100"
-                                    id="close-cancelled-btn2">Done</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pause-overlay" id="pause-overlay">
-                    <div class="relative">
-                        <div class="pause inner-overlay">
-                            <span class="line"></span>
-
-                            <div class="d-flex justify-content-end">
-                                <i class="fa-solid fa-xmark close" id="pause-close"></i>
-                            </div>
-
-                            <h1 class="title">Pause auto-renewals</h1>
-                            <h2 class="subtitle">Are you sure you want to pause this Data auto-renewal?</h2>
-
-                            <button type="button" class="btn btn-primary w-100" id="paused-btn">Pause
-                                Auto-renewals</button>
-                            <button class="btn-text text-center w-100 d-inline-block" id="pause-close2">Close</button>
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <div class="paused-overlay" id="paused-overlay">
-                    <div class="relative">
-                        <div class="paused inner-overlay">
-                            <div class="d-flex justify-content-end">
-                                <i class="fa-solid fa-xmark close" id="close-paused-btn"></i>
-                            </div>
-
-                            <div class="text-center">
-                                <img src="images/pause-circle.png" alt="success">
-
-                                <h1 class="title">MTN auto renewal <br /> has been paused successfully.</h1>
-
-                                <button type="button" class="btn btn-primary w-100" id="close-paused-btn2">Done</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
     <script src="js/main.js"></script>
     <script>
         function changeImage() {
@@ -1274,116 +1211,6 @@
                 inputElement.value = currentValue + 1;
             }
         }
-    </script>
-
-    <script>
-        // Get the elements for Renewals
-        const renewalOverlayBtn = document.getElementById('showRenewalOverlay');
-        const renewalOverlay = document.getElementById('renewalOverlay')
-        const closeRenewalOverlayBtn = document.getElementById('close-renewal-overlay')
-
-        const pauseBtn = document.getElementById('pause-btn');
-        const pauseOverlay = document.getElementById('pause-overlay');
-        const closePauseOverlayButton = document.getElementById('pause-close');
-        const closePause2OverlayButton = document.getElementById('pause-close2');
-
-        const cancelBtn = document.getElementById('cancel-btn');
-        const cancelOverlay = document.getElementById('cancel-overlay');
-        const closeCancelOverlayButton = document.getElementById('cancel-close');
-        const closeCancel2OverlayButton = document.getElementById('cancel-close2');
-
-        const pausedOverlay = document.getElementById('paused-overlay');
-        const pausedBtn = document.getElementById('paused-btn');
-        const closePausedOverlay = document.getElementById('close-paused-btn')
-        const closePaused2Overlay = document.getElementById('close-paused-btn2')
-
-        const cancelledOverlay = document.getElementById('cancelled-overlay');
-        const cancelledBtn = document.getElementById('cancelled-btn');
-        const closeCancelledOverlay = document.getElementById('close-cancelled-btn')
-        const closeCancelled2Overlay = document.getElementById('close-cancelled-btn2')
-
-        function showOverlay() {
-            renewalOverlay.style.right = '0';
-        }
-        function hideOverlay() {
-            renewalOverlay.style.right = '-100%';
-        }
-
-        // Show the pause overlay when the pause button is clicked
-        renewalOverlayBtn.addEventListener('click', showOverlay);
-
-        // Hide the pause overlay when the close button is clicked
-        closeRenewalOverlayBtn.addEventListener('click', hideOverlay);
-
-        // Function to show the pause overlay (slide up)
-            function showPauseOverlay() {
-                pauseOverlay.style.bottom = '0';
-            }
-
-            // Function to hide the pause overlay (slide down)
-            function hidePauseOverlay() {
-                pauseOverlay.style.bottom = '-100%';
-            }
-
-            // Function to show the pause overlay (slide up)
-            function showCancelOverlay() {
-                cancelOverlay.style.bottom = '0';
-            }
-
-            // Function to hide the pause overlay (slide down)
-            function hideCancelOverlay() {
-                cancelOverlay.style.bottom = '-100%';
-            }
-
-
-            // Show the pause overlay when the pause button is clicked
-            pauseBtn.addEventListener('click', showPauseOverlay);
-
-            // Hide the pause overlay when the close button is clicked
-            closePauseOverlayButton.addEventListener('click', hidePauseOverlay);
-            closePause2OverlayButton.addEventListener('click', hidePauseOverlay);
-
-            // Show the pause overlay when the pause button is clicked
-            cancelBtn.addEventListener('click', showCancelOverlay);
-
-            // Hide the pause overlay when the close button is clicked
-            closeCancelOverlayButton.addEventListener('click', hideCancelOverlay);
-            closeCancel2OverlayButton.addEventListener('click', hideCancelOverlay);
-
-            // Function to show the pause overlay (slide up)
-            function showPausedOverlay() {
-                pausedOverlay.style.bottom = '0';
-            }
-
-            // Function to hide the pause overlay (slide down)
-            function hidePausedOverlay() {
-                pausedOverlay.style.bottom = '-100%';
-            }
-
-            // Show the pause overlay when the pause button is clicked
-            pausedBtn.addEventListener('click', showPausedOverlay);
-
-            // Hide the pause overlay when the close button is clicked
-            closePausedOverlay.addEventListener('click', hidePausedOverlay);
-            closePaused2Overlay.addEventListener('click', hidePausedOverlay);
-
-
-            // Function to show the pause overlay (slide up)
-            function showCancelledOverlay() {
-                cancelledOverlay.style.bottom = '0';
-            }
-
-            // Function to hide the pause overlay (slide down)
-            function hideCancelledOverlay() {
-                cancelledOverlay.style.bottom = '-100%';
-            }
-
-            // Show the pause overlay when the pause button is clicked
-            cancelledBtn.addEventListener('click', showCancelledOverlay);
-
-            // Hide the pause overlay when the close button is clicked
-            closeCancelledOverlay.addEventListener('click', hideCancelledOverlay);
-            closeCancelled2Overlay.addEventListener('click', hideCancelledOverlay);
     </script>
 
 

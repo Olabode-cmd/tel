@@ -8,10 +8,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.min.js"></script>
 </head>
@@ -131,14 +131,196 @@
                     <h1 class="title">Welcome Back, <br class="d-block d-md-none" /> Emmanuel 👋</h1>
 
                     <div class="d-flex align-items-center">
-                        <a href="#" class="purple-btn">
+                        <button type="button" href="#" class="purple-btn" data-bs-toggle="modal" data-bs-target="#fund">
                             <img src="images/wallet-add.png" alt="add">
                             &nbsp; Fund Wallet
-                        </a>
+                        </button>
 
-                        <a href="#" class="btn btn-outline ms-2 d-none d-md-block">
-                            Withdraw
-                        </a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="fund" tabindex="-1" aria-labelledby="fundLabel"
+                            data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                            <div class="d-flex align-items-center">
+                                                <img src="images/fund.png" alt="fund" class="me-2">
+                                                Fund Wallet
+                                            </div>
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <ul class="fund-modal">
+                                            <li data-bs-toggle="modal" data-bs-target="#bank">
+                                                <h5>Fund with Bank Transfer</h5>
+                                                <p>Add money to your wallet via Bank Transfer</p>
+                                            </li>
+                                            <li data-bs-toggle="modal" data-bs-target="#paystack">
+                                                <h5>Fund with Paystack</h5>
+                                                <p>Add money to your wallet via paystack</p>
+                                            </li>
+                                            <li data-bs-toggle="modal" data-bs-target="#vpay">
+                                                <h5>Fund with Vpay</h5>
+                                                <p>Add money to your wallet via Vpay</p>
+                                            </li>
+                                            <li data-bs-toggle="modal" data-bs-target="#monnify">
+                                                <h5>Fund with Monnify</h5>
+                                                <p>Add money to your wallet via Monnify</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="bank" tabindex="-1" aria-labelledby="bankLabel"
+                            data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                            <div class="d-flex align-items-center">
+                                                <img src="images/fund.png" alt="fund" class="me-2">
+                                                Bank Transfer
+                                            </div>
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="mb-2">
+                                            <p class="m-0">Bank name</p>
+                                            <h5>VFD MFB</h5>
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <p class="m-0">Account name</p>
+                                            <h5>Telneting Communication</h5>
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <p class="m-0">Account number</p>
+                                                <h5 class="text-primary" id="accountNumber">4602472193</h5>
+                                            </div>
+
+                                            <button class="opaque-btn" data-clipboard-target="#accountNumber">
+                                                <img src="images/copy.png" alt="copy">
+                                                Copy
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="paystack" tabindex="-1" aria-labelledby="paystackLabel" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                            <div class="d-flex align-items-center">
+                                                <img src="images/fund.png" alt="fund" class="me-2">
+                                                Paystack
+                                            </div>
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                       <div class="mt-2">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <label for="" class="form-label">Amount</label>
+                                                    <input type="number" class="form-control" placeholder="100">
+                                                </div>
+
+                                                <button type="button" class="btn btn-primary mt-3 w-50" data-bs-toggle="modal" data-bs-target="#fundSuccess">Fund</button>
+                                            </form>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="monnify" tabindex="-1" aria-labelledby="monnifyLabel" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                            <div class="d-flex align-items-center">
+                                                <img src="images/fund.png" alt="fund" class="me-2">
+                                                Monnify
+                                            </div>
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="mt-2">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <label for="" class="form-label">Amount</label>
+                                                    <input type="number" class="form-control" placeholder="100">
+                                                </div>
+                        
+                                                <button type="button" class="btn btn-primary mt-3 w-50" data-bs-toggle="modal" data-bs-target="#fundSuccess">Fund</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="vpay" tabindex="-1" aria-labelledby="vpayLabel" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                            <div class="d-flex align-items-center">
+                                                <img src="images/fund.png" alt="fund" class="me-2">
+                                                Vpay
+                                            </div>
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h5>Fund with Vpay</h5>
+                                        <p>You will be funded as soon as your transaction is confirmed</p>
+
+                                        <button type="button" class="btn btn-primary w-50 mt-3">Proceed to Pay</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="fundSuccess" tabindex="-1" aria-labelledby="fundSuccessLabel" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                            <div class="d-flex align-items-center">
+                                                <img src="images/fund.png" alt="fund" class="me-2">
+                                                Fund Wallet
+                                            </div>
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="text-center">
+                                            <img src="images/icon-success.png" alt="success">
+                                            <h5>Transaction Successful</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -174,15 +356,17 @@
                             <div class="stat-card orange">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="d-flex w-50">
-                                        <img src="images/wallet.png" alt="wallet" class="pe-2 d-inline-block" style="width: 33px">
+                                        <img src="images/wallet.png" alt="wallet" class="pe-2 d-inline-block"
+                                            style="width: 33px">
                                         <span>Your balance</span>
                                     </div>
                                 </div>
                                 <h3 class="mb-3"><span id="balance3">900 TLC</span></h3>
-                            
+
                                 <div class="d-flex justify-content-end">
                                     <button class="btn btn-outline white">
-                                        <img src="images/wallet.png" alt="wallet" class="pe-2 d-inline-block" style="width: 30px">
+                                        <img src="images/wallet.png" alt="wallet" class="pe-2 d-inline-block"
+                                            style="width: 30px">
                                         Withdraw
                                     </button>
                                 </div>
@@ -457,11 +641,11 @@
     </div>
 
     <!-- <script src="js/popper.js"></script> -->
+    <script src="js/bootstrap.js"></script>
     <script src="js/owl.carousel.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
     <script src="js/main.js"></script>
     <script>
         $('.owl-1').owlCarousel({
@@ -474,7 +658,16 @@
                     items: 2
                 }
             }
-        })
+        });
+
+        // Initialize Clipboard.js
+        new ClipboardJS('.opaque-btn');
+
+        // Change the button text to "Copied!" on success
+        const copyButton = document.querySelector('.opaque-btn');
+        copyButton.addEventListener('click', function () {
+            this.innerText = 'Copied!';
+        });
     </script>
 </body>
 
