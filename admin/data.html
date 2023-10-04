@@ -126,7 +126,7 @@
                             <h1 class="title ms-2">Buy Data</h1>
                         </div>
 
-                        <div class="opaque-card">
+                        <div class="opaque-card d-none d-md-block">
                             <p class="text-primary">NGN Balance</p>
                             <div class="d-flex align-items-center">
                                 <h3> &#8358;<span id="balance1">1,200.00</span></h3>
@@ -139,13 +139,13 @@
 
                         <div class="mb-3">
                             <label class="form-label">Phone number</label>
-                            <input type="number" class="form-control" placeholder="080122xxx">
-
-                            <button type="button" class="opaque-btn" data-bs-toggle="modal"
-                                data-bs-target="#beneficiaries">
-                                <i class="fa-solid fa-plus"></i>
-                                Select from beneficiaries
-                            </button>
+                            <div class="input-group">
+                                <input type="number" class="form-control">
+                                <button type="button" class="input-group-text primary btn-text" data-bs-toggle="modal"
+                                    data-bs-target="#beneficiaries">
+                                    <i class="fa-solid fa-plus text-primary"></i>
+                                </button>
+                            </div>
 
                             <!-- Modal -->
                             <div class="modal fade" id="beneficiaries" tabindex="-1"
@@ -213,12 +213,12 @@
                         <div class="mb-3">
                             <label class="form-label">Data Plan </label>
 
-                            <div class="options d-flex flex-wrap align-items-center mb-2">
+                            <!-- <div class="options d-flex flex-wrap align-items-center mb-2">
                                 <h3 class="data option active opaque-btn">all</h3>
                                 <h3 class="data option opaque-btn">sme</h3>
                                 <h3 class="data option opaque-btn">hynetflex</h3>
                                 <h3 class="data option opaque-btn">corporate gifting</h3>
-                            </div>
+                            </div> -->
 
                             <select class="form-control">
                                 <option value="1" selected disabled>Select data plan</option>
@@ -232,7 +232,12 @@
                                     <i class="fa-solid fa-plus"></i>
                                     Add New Purchase
                                 </button>
-
+                            
+                                <div class="d-flex align-items-center btns">
+                                    <div class="pay-bottom">
+                                        <h5>You are paying <span class="price">&#8358; 0</span></h5>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -324,12 +329,7 @@
                             </div>
                         </div>
 
-                        <div class="pay-bottom">
-                            <h5>You are paying <span class="price">&#8358; 0</span></h5>
-                        </div>
-
-                        <button type="button" class="btn btn-primary px-stretch" data-bs-toggle="modal"
-                            data-bs-target="#pay">Pay</button>
+                        <button type="button" class="btn btn-primary form-btn" data-bs-toggle="modal" data-bs-target="#pay">Pay</button>
 
 
                         <div class="modal fade" id="pay" tabindex="-1" aria-labelledby="payLabel"
@@ -652,7 +652,7 @@
                 </div>
             </div>
 
-            <div class="d-block d-md-none mt-4">
+            <!-- <div class="d-block d-md-none mt-4">
                 <div class="transaction-card">
                     <div class="card">
                         <h1 class="title">Recent transactions</h1>
@@ -818,7 +818,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div class="right-sidebar d-none d-md-block" id="right-sidebar-content">
@@ -1090,126 +1090,6 @@
     </div>
 
 
-    <!-- The overlay container -->
-    <!-- <div id="renewalOverlay" class="overlay">
-        <div class="relative d-none d-md-block">
-            <div class="overlay-content">
-                <div class="d-flex justify-content-end">
-                    <i class="fa-solid fa-xmark close" id="close-renewal-overlay"></i>
-                </div>
-
-
-                <div class="renewals">
-                    <h1 class="title">Auto-renewals</h1>
-                    <p>Mobile top-up auto-renewals</p>
-
-
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="plan-card">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center">
-                                    <div class="network">
-                                        <img src="images/mtn.png" alt="mtn">
-                                    </div>
-
-                                    <div class="d-flex flex-column justify-content-between ms-3">
-                                        <h2 class="title">MTN Data</h2>
-                                        <p>&#8358;500.00 &#8226; Weekly</p>
-                                        <p>Next top-up - Sept 3</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <img src="images/pause.png" id="pause-btn" alt="pause">
-                        <img src="images/cancel.png" id="cancel-btn" alt="cancel">
-                    </div>
-                </div>
-
-                <div class="cancel-overlay" id="cancel-overlay">
-                    <div class="relative">
-                        <div class="cancel inner-overlay">
-                            <span class="line"></span>
-
-                            <div class="d-flex justify-content-end">
-                                <i class="fa-solid fa-xmark close" id="cancel-close"></i>
-                            </div>
-
-                            <h1 class="title">Cancel auto-renewals</h1>
-                            <h2 class="subtitle">Are you sure you want to cancel this Data auto-renewal?</h2>
-
-                            <button type="button" class="btn btn-primary w-100" id="cancelled-btn">Cancel
-                                Auto-renewals</button>
-                            <button class="btn-text text-center w-100 d-inline-block" id="cancel-close2">Close</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cancelled-overlay" id="cancelled-overlay">
-                    <div class="relative">
-                        <div class="cancelled inner-overlay">
-                            <div class="d-flex justify-content-end">
-                                <i class="fa-solid fa-xmark close" id="close-cancelled-btn"></i>
-                            </div>
-
-                            <div class="text-center">
-                                <img src="images/icon-success.png" alt="success">
-
-                                <h1 class="title">MTN auto renewal <br /> has been cancelled successfully.</h1>
-
-                                <button type="button" class="btn btn-primary w-100"
-                                    id="close-cancelled-btn2">Done</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pause-overlay" id="pause-overlay">
-                    <div class="relative">
-                        <div class="pause inner-overlay">
-                            <span class="line"></span>
-
-                            <div class="d-flex justify-content-end">
-                                <i class="fa-solid fa-xmark close" id="pause-close"></i>
-                            </div>
-
-                            <h1 class="title">Pause auto-renewals</h1>
-                            <h2 class="subtitle">Are you sure you want to pause this Data auto-renewal?</h2>
-
-                            <button type="button" class="btn btn-primary w-100" id="paused-btn">Pause
-                                Auto-renewals</button>
-                            <button class="btn-text text-center w-100 d-inline-block" id="pause-close2">Close</button>
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <div class="paused-overlay" id="paused-overlay">
-                    <div class="relative">
-                        <div class="paused inner-overlay">
-                            <div class="d-flex justify-content-end">
-                                <i class="fa-solid fa-xmark close" id="close-paused-btn"></i>
-                            </div>
-
-                            <div class="text-center">
-                                <img src="images/pause-circle.png" alt="success">
-
-                                <h1 class="title">MTN auto renewal <br /> has been paused successfully.</h1>
-
-                                <button type="button" class="btn btn-primary w-100" id="close-paused-btn2">Done</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div> -->
-
-
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -1332,6 +1212,21 @@
                 inputElement.value = currentValue + 1;
             }
         }
+
+
+         // Get references to the button and the purchase div
+            const togglePurchase = document.getElementById("togglePurchase");
+            const purchaseDiv = document.querySelector(".purchase.row");
+
+            // Add a click event listener to the button
+            togglePurchase.addEventListener("click", function () {
+                // Toggle the visibility of the purchase div
+                if (purchaseDiv.style.display === "none" || purchaseDiv.style.display === "") {
+                    purchaseDiv.style.display = "block"; // Show the div
+                } else {
+                    purchaseDiv.style.display = "none"; // Hide the div
+                }
+            });
     </script>
 
 

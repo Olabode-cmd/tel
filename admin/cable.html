@@ -126,7 +126,7 @@
                             <h1 class="title ms-2">Cable Subscription</h1>
                         </div>
 
-                        <div class="opaque-card">
+                        <div class="opaque-card d-none d-md-block">
                             <p class="text-primary">NGN Balance</p>
                             <div class="d-flex align-items-center">
                                 <h3> &#8358;<span id="balance1">1,200.00</span></h3>
@@ -139,13 +139,13 @@
 
                         <div class="mb-3">
                             <label class="form-label">Decoder No.</label>
-                            <input type="number" class="form-control" placeholder="080122xxx">
-
-                            <button type="button" class="opaque-btn" data-bs-toggle="modal"
-                                data-bs-target="#beneficiaries">
-                                <i class="fa-solid fa-plus"></i>
-                                Select from beneficiaries
-                            </button>
+                            <div class="input-group">
+                                <input type="number" class="form-control">
+                                <button type="button" class="input-group-text primary btn-text" data-bs-toggle="modal"
+                                    data-bs-target="#beneficiaries">
+                                    <i class="fa-solid fa-plus text-primary"></i>
+                                </button>
+                            </div>
 
                             <!-- Modal -->
                             <div class="modal fade" id="beneficiaries" tabindex="-1"
@@ -226,6 +226,11 @@
                                     Add New Purchase
                                 </button>
 
+                                <div class="d-flex align-items-center btns">
+                                    <div class="pay-bottom">
+                                        <h5>You are paying <span class="price">&#8358; 0</span></h5>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -240,7 +245,7 @@
 
                         <div id="beneficiaryInput" class="hidden">
                             <input type="text" id="beneficiaryName" placeholder="Beneficiary Name"
-                                class="form-control mt-2 beneficiary" />
+                                class="form-control mt-2 mb-2 beneficiary" />
                         </div>
 
                         <div class="purchase row">
@@ -311,11 +316,8 @@
                             </div>
                         </div>
 
-                        <div class="pay-bottom">
-                            <h5>You are paying <span class="price">&#8358; 0</span></h5>
-                        </div>
 
-                        <button type="button" class="btn btn-primary px-stretch mt-2" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-primary form-btn" data-bs-toggle="modal"
                             data-bs-target="#pay">Confirm Decoder No.</button>
 
 
@@ -639,7 +641,7 @@
                 </div>
             </div>
 
-            <div class="d-block d-md-none mt-4">
+            <!-- <div class="d-block d-md-none mt-4">
                 <div class="transaction-card">
                     <div class="card">
                         <h1 class="title">Recent transactions</h1>
@@ -805,7 +807,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div class="right-sidebar d-none d-md-block" id="right-sidebar-content">
