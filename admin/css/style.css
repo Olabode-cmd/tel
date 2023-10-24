@@ -153,6 +153,35 @@ button:focus {
     border: 1px solid var(--color-primary-darker);
 }
 
+@media (max-width: 767px) {
+
+    select.form-control,
+    input.form-control {
+        padding: 0.5rem 1rem;
+    }
+
+    .btn-text {
+        padding: .5rem 1rem;
+    }
+
+    .purple-btn {
+        padding: .5rem 1rem;
+    }
+    .purple-btn.full {
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .opaque-btn {
+        padding: .5rem 1rem;
+    }
+
+    .btn.btn-outline {
+        padding: .5rem 1rem;
+    }
+}
+
 .hidden {
     display: none;
 }
@@ -545,11 +574,11 @@ a[data-toggle="collapse"] {
     /* Display items vertically */
 }
 
-.nav-item.dropdown:hover .dropdown-menu {
+/* .nav-item.dropdown:hover .dropdown-menu {
     display: flex;
     flex-direction: column;
     animation: fadeIn 0.3s ease-in-out;
-}
+} */
 
 @keyframes fadeIn {
     from {
@@ -2591,4 +2620,9 @@ h3.option.active {
     .settings .tab-content form {
         width: 100%;
     }
+}
+
+#youtube-player {
+    width: 100%;
+    border-radius: 16px;
 }

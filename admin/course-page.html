@@ -113,16 +113,17 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card">
-                                <!-- <img src="images/course-bg.png" alt="course"> -->
-                                <div style="padding:56.25% 0 0 0;position:relative; border-radius: 18px; overflow: hidden;">
+                                <!-- <div style="padding:56.25% 0 0 0;position:relative; border-radius: 18px; overflow: hidden;">
                                     <iframe
                                         src="https://player.vimeo.com/video/870485595?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                                         frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
                                         style="position:absolute;top:0;left:0;width:100%;height:100%;"
                                         title="Sales Intro Course">
                                     </iframe>
-                                </div>
-                                <script src="https://player.vimeo.com/api/player.js"></script>
+                                </div> -->
+
+                                <div id="youtube-player"></div>
+                                <script src="https://www.youtube.com/iframe_api"></script>
 
 
                                 <h2 class="title fw-bold">1.1 Introduction: Starting a VTU Business</h2>
@@ -291,8 +292,61 @@
 
         rightToggle.addEventListener('click', function () {
             rightBar.classList.toggle('hide')
-        })
+        });
+
     </script>
+
+    <div class="card">
+        <div id="youtube-player"></div>
+        <h2 class="title fw-bold">1.1 Introduction: Starting a VTU Business</h2>
+        <span class="time">12 mins</span>
+    </div>
+    
+    <script>
+        // Array of YouTube video IDs
+        const videoIds = [
+            'ctsrxg6KpAI', 'PseBinVoZpI', 'KtlNXZyHfr8',
+            '6GnCib0xz1Y', 'gC6hEg6G_oU', 'tc3kP6C6Tb0',
+            'oc_gQIfzsqs'
+        ];
+
+        let currentVideoIndex = 0;
+        let player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '360',
+                width: '640',
+                videoId: videoIds[currentVideoIndex],
+                playerVars: {
+                    autoplay: 1,
+                    controls: 0,
+                    modestbranding: 1,
+                    rel: 0,
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            // Video player is ready
+            event.target.playVideo();
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) {
+                // Video has ended, play the next video if available
+                currentVideoIndex++;
+                if (currentVideoIndex < videoIds.length) {
+                    player.loadVideoById(videoIds[currentVideoIndex]);
+                }
+            }
+        }
+    </script>
+
 </body>
 
 </html>
