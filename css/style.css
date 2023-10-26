@@ -2491,6 +2491,7 @@ LOGIN AND SIGNUP PAGES
     color: var(--color-primary);
     font-weight: 600;
     text-decoration: underline;
+    font-size: .9rem;
 }
 
 .login-form .signup {

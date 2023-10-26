@@ -135,6 +135,13 @@ button:focus {
     border: none;
 }
 
+/* @media (max-width: 767px) {
+    .opaque-btn {
+        padding: .4rem .8rem;
+        font-size: .85rem;
+    }
+} */
+
 .btn.btn-outline {
     color: var(--color-primary);
     background: transparent;
@@ -178,7 +185,8 @@ button:focus {
     }
 
     .opaque-btn {
-        padding: .5rem 1rem;
+        padding: .3rem 1rem;
+        font-size: .85rem;
     }
 
     .btn.btn-outline {
@@ -381,12 +389,20 @@ select.form-select:focus {
     }
 
     #sidebar.active {
-        margin-left: 50px;
+        margin-left: 150px;
+        /* padding-right: 6rem; */
+    }
+    #sidebar.active .p-4.pt-5 {
+        transform: translateX(-4rem);
     }
 
     #sidebar .custom-menu {
         margin-right: -70px !important;
         top: 10px !important;
+        transition: .3s;
+    }
+    #sidebar.active .custom-menu {
+        transform: translateX(-4.5rem);
     }
 }
 
@@ -859,11 +875,22 @@ form.main-form {
     margin-top: 2rem;
 }
 
-.airtime label {
+form.main-form label {
+    font-size: .95rem;
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    form.main-form label {
+        font-size: .85rem !important;
+    }
+}
+
+/* .airtime label {
     font-size: .95rem;
     font-weight: 600;
 
-}
+} */
 
 .card-body h1.title {
     font-size: 2rem;
@@ -1091,6 +1118,19 @@ form.main-form {
     font-weight: 700;
     /* margin: 0; */
     margin-top: 1rem;
+}
+
+@media (max-width: 767px) {
+    .pay-bottom h5 {
+        font-size: .8rem;
+    }
+    .tg-list-item {
+        transform: scale(0.85);
+    }
+    form.main-form h6.text-black.ms-3 {
+        font-size: .85rem;
+        transform: translateX(-10px) translateY(4px);
+    }
 }
 
 .pay-bottom h5 span.price {
@@ -2582,7 +2622,7 @@ h3.option.active {
 
 @media (max-width: 550px) {
     .d-flex.opaque-btns .opaque-btn {
-        padding: .7rem .4rem;
+        padding: .4rem .5rem;
     }
 }
 
