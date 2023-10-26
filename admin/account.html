@@ -436,25 +436,33 @@
                                     <h1 class="title text-center">Contact us</h1>
                             
                                     <div class="mt-3">
-                                        <div class="d-flex align-items-center contact-card">
-                                            <img src="images/whatsapp.png" alt="whatsapp" class="me-2">
-                                            <p>Join our whatsapp community</p>
-                                        </div>
+                                        <a href="https://chat.whatsapp.com/Gjo9cZ1R3v4JABRoH0aLeR">
+                                            <div class="d-flex align-items-center contact-card">
+                                                <img src="images/whatsapp.png" alt="whatsapp" class="me-2">
+                                                <p>Join our whatsapp community</p>
+                                            </div>
+                                        </a>
 
-                                        <div class="d-flex align-items-center contact-card">
-                                            <img src="images/twitter.png" alt="twitter" class="me-2">
-                                            <p>Twitter page</p>
-                                        </div>
+                                        <a href="https://twitter.com/Telnetinghq">
+                                            <div class="d-flex align-items-center contact-card">
+                                                <img src="images/twitter.png" alt="twitter" class="me-2">
+                                                <p>Twitter page</p>
+                                            </div>
+                                        </a>
 
-                                        <div class="d-flex align-items-center contact-card">
-                                            <img src="images/facebook.png" alt="facebook" class="me-2">
-                                            <p>Facebook</p>
-                                        </div>
+                                        <a href="https://web.facebook.com/telnetinghq/">
+                                            <div class="d-flex align-items-center contact-card">
+                                                <img src="images/facebook.png" alt="facebook" class="me-2">
+                                                <p>Facebook</p>
+                                            </div>
+                                        </a>
 
-                                        <div class="d-flex align-items-center contact-card">
-                                            <img src="images/instagram.png" alt="instagram" class="me-2">
-                                            <p>Instagram page</p>
-                                        </div>
+                                        <a href="https://www.instagram.com/telnetinghq/">
+                                            <div class="d-flex align-items-center contact-card">
+                                                <img src="images/instagram.png" alt="instagram" class="me-2">
+                                                <p>Instagram page</p>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -468,14 +476,31 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script> -->
     <script src="js/main.js"></script>
     
     <!-- <script src="js/bootstrap.min.js"></script> -->
 
     <script>
+
+        // Dropdown
+
+            // Get all dropdown links
+            const dropdownLinks = document.querySelectorAll('.nav-item.dropdown');
+
+            // Add a click event listener to each dropdown link
+            dropdownLinks.forEach((link) => {
+                link.addEventListener('click', function () {
+                    // Toggle the visibility of the associated dropdown menu
+                    const dropdownMenu = this.querySelector('.dropdown-menu');
+                    if (dropdownMenu.style.display === 'flex') {
+                        dropdownMenu.style.display = 'none';
+                    } else {
+                        dropdownMenu.style.display = 'flex';
+                    }
+                });
+            });
+
+
         const inputBoxes = document.querySelectorAll('.number-input input');
         const inputBoxes2 = document.querySelectorAll('.number2-input input');
 

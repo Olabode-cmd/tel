@@ -2767,3 +2767,15 @@ LOGIN AND SIGNUP PAGES
         font-size: 1.5rem;
     }
 }
+
+.d-flex.check-align {
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .d-flex.check-align {
+        align-items: start;
+    }
+    .d-flex.check-align input {
+        transform: translateY(5px);
+    }
+}
